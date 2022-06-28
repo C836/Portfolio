@@ -1,17 +1,15 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { GlobalStyle } from "./global";
+import { Fragment } from "react";
 
-import { Button } from './components/Button/Button.styled'
+import Intro from "./sections/Intro/Intro";
 
 function App() {
   return (
-    <div className="App">
-      <Button>
-        aweawe
-      </Button>
-    </div>
-  )
+    <Fragment>
+      <GlobalStyle />
+      <Intro />
+    </Fragment>
+  );
 }
 
-export default App
+export default App;
