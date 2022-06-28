@@ -19,7 +19,7 @@ export const Dropdown = styled.section<Dropdown>`
     top: 0;
     right: 0;
     z-index: -2;
-    background-color: hsl(4, 98%, 60%);
+    background-color: var(--main);
     transition: all 0.3s ease;
 
     transform: ${(props) => (props.active ? "scale3d(5.5, 5.5, 1)" : "none")};
@@ -33,7 +33,7 @@ export const Button = styled.a<Dropdown>`
   width: 3.5em;
   height: 3.5em;
   border-radius: 50%;
-  background-color: hsl(4, 98%, 60%);
+  background-color: var(--main);
   box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, 0.26);
   color: hsl(0, 0%, 100%);
   text-align: center;
@@ -42,7 +42,7 @@ export const Button = styled.a<Dropdown>`
   outline: 0;
   box-shadow: ${(props) =>
     props.active
-      ? "0 4px 8px 0 hsla(0, 0%, 0%, .4);"
+      ? "0 0 15px 0 hsla(0, 0%, 0%, .4);"
       : "inset 0 0 3px hsla(0, 0%, 0%, .3);"};
 `;
 
