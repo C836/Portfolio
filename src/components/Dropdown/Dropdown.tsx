@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { IconType } from "react-icons/lib";
-import { Config } from "./Dropdown.config";
 
 import * as S from "./Dropdown.styled";
+import { Config } from "./Dropdown.config";
+
+import { FaPlus } from "react-icons/fa";
 
 export default function Dropdown(props: Config) {
   const { icons } = props;
@@ -16,13 +17,16 @@ export default function Dropdown(props: Config) {
   return (
     <S.Dropdown active={dropActive}>
       <S.Button active={dropActive} onClick={handleClick}>
-        +
+        <FaPlus />
       </S.Button>
 
       <S.Menu>
-        {icons.map((item:any, index:number) => (
-          <S.Item active={dropActive} key={index} href="#">
-            {item}
+        {icons.map((item, index) => (
+          <S.Item active={dropActive}
+          target="_blank"
+          key={index} 
+          href={item.url}>
+            {item.icon} 
           </S.Item>
         ))}
       </S.Menu>

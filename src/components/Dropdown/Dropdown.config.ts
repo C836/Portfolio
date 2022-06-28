@@ -1,5 +1,6 @@
-import { IconType } from "react-icons"
-
-export interface Config{
-  icons: any
+export interface Config {
+  icons: {
+    icon: JSX.Element;
+    url: string;
+  }[];
 }
