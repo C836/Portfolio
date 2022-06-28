@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-export const Glitch = styled.div`
+export const Glitch = styled.h1`
   color: white;
-  font-size: clamp(35px, 7vw, 80px);
   animation: glitch-skew 1s infinite linear alternate-reverse;
   cursor: pointer;
 
