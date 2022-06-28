@@ -56,7 +56,9 @@ export const Item = styled.a<Dropdown>`
   top: 0.2em;
   right: 0.2em;
   z-index: -1;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: hsl(0, 0%, 100%);
   font-size: 1em;
