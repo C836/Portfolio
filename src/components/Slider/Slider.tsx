@@ -13,6 +13,17 @@ export default function Slider(props: Config) {
 
   const [actualIndex, setIndex] = useState(0);
 
+  const isCentered = (index: number, number_of_icons: number) => {
+    if (
+      actualIndex + 1 === index ||
+      index === 0 && actualIndex === number_of_icons
+    ) {
+      return true;
+    } else {
+      false;
+    }
+  };
+
   return (
     <Swiper
       slidesPerView={3}
@@ -34,9 +45,13 @@ export default function Slider(props: Config) {
       className="mySwiper"
     >
       {icons.map((item: any, index: number) => (
-        <SwiperSlide>
-          <S.Icon>
-            {item.icon}
+        <SwiperSlide key={index}>
+          <S.Icon
+            active={isCentered(index, icons.length - 1) ? true : false}
+            color={item.color}
+          >
+            <figure>{item.icon}</figure>
+            <p>{item.name}</p>
           </S.Icon>
         </SwiperSlide>
       ))}
