@@ -23,4 +23,8 @@ body {
   background-size: 26px 26px;
 }
 
+.app{
+  padding: 0 5%;
+}
+
 `;
