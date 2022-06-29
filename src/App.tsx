@@ -1,14 +1,17 @@
 import { GlobalStyle } from "./global";
-import { Fragment } from "react";
 
 import Intro from "./sections/Intro/Intro";
+import About from "./sections/About/About";
 
 function App() {
   return (
-    <Fragment>
+    <>
       <GlobalStyle />
       <Intro />
-    </Fragment>
+      <div className="app">
+        <About />
+      </div>
+    </>
   );
 }
 
