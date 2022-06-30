@@ -9,11 +9,14 @@ export default function About(props: Config) {
   return (
     <S.About>
       <S.Slider>
+        <h1>Front-End</h1>
         <Slider icons={icons.frontEnd} />
+        <h1>Back-End +</h1>
         <Slider icons={icons.backEndEtc} />
       </S.Slider>
 
       <S.TextField>
+        <h1>About.me</h1>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis
         ornare velit eu commodo. Phasellus urna lectus, efficitur nec quam ut,
         ultricies lobortis sapien. Vivamus ac dolor mollis, sollicitudin nulla
