@@ -2,6 +2,7 @@ import { GlobalStyle } from "./global";
 
 import Intro from "./sections/Intro/Intro";
 import About from "./sections/About/About";
+import Highlights from "./sections/Projects/Highlights/Highlights";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Intro />
       <div className="app">
         <About />
+        <Highlights />
       </div>
     </>
   );
