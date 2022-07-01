@@ -1,43 +1,44 @@
 import * as S from "./Highlight.styled";
 import { Config } from "./Highlight.config";
 
-import { SiGithub } from "react-icons/si";
-import { MdOpenInNew } from "react-icons/md";
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 import { highlights } from "../../../data/projects/highlights";
 
 export default function Highlight(props: Config) {
   return (
-    <section>
-      <div>
+    <S.Highlight>
+      <S.Border>
         <a target={"_blank"} href={highlights[0].links.web}>
-          <figure>
+          <S.Img_Wrapper>
             <img src={highlights[0].cover} />
-          </figure>
+          </S.Img_Wrapper>
         </a>
-      </div>
+      </S.Border>
 
-      <article>
+      <S.TextField>
         <h3>{highlights[0].nome}</h3>
         <p>{highlights[0].descricao}</p>
-        <ul>
+
+        <S.TechList>
           {highlights[0].tech.map((item: any, index: number) => (
-            <li key={index}>{item}</li>
+            <S.Tech key={index}>{item}</S.Tech>
           ))}
-        </ul>
-        <ul>
+        </S.TechList>
+
+        <S.Links>
           <li>
             <a target={"_blank"} href={highlights[0].links.github}>
-              <SiGithub />
+              <FaGithub />
             </a>
           </li>
           <li>
             <a target={"_blank"} href={highlights[0].links.web}>
-              <MdOpenInNew />
+              <FaExternalLinkAlt />
             </a>
           </li>
-        </ul>
-      </article>
-    </section>
+        </S.Links>
+      </S.TextField>
+    </S.Highlight>
   );
 }
