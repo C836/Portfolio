@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
-export const Highlight = styled.section`
+interface Highlight {
+  right?: boolean
+}
+
+export const Highlight = styled.section<Highlight>`
   display: flex;
   align-items: center;
 
   margin: 0;
   width: 100%;
+  
+  direction: ${props => props.right ? 'rtl' : 'ltr'};
 `;
 
 export const Border = styled.figure`
@@ -28,7 +34,7 @@ export const TextField = styled.article`
   width: 50%;
   margin-top: 40px;
   font-family: "Nunito";
-  margin-left: 40px;
+  margin: 0 40px;
 
   & h3 {
     margin: 0;
@@ -36,9 +42,10 @@ export const TextField = styled.article`
   }
 
   & p {
-    margin-top: 28px;
+    margin-top: 18px;
     font-size: 1.1rem;
     line-height: 1.75rem;
+    text-align: justify;
   }
 `;
 
@@ -49,12 +56,13 @@ export const TechList = styled.ul`
   padding: 0;
 `;
 
-export const Tech = styled.li`
-  margin-right: 15px;
+export const Tech = styled.li<Highlight>`
   font-size: 1rem;
+
+  margin: 0 ${props => props.right ? '0 0 18px' : '18px 0 0'};
 `;
 
-export const Links = styled.ul`
+export const Links = styled.ul<Highlight>`
   color: white;
   font-size: 26px;
   padding: 0;
@@ -65,6 +73,6 @@ export const Links = styled.ul`
 
   & a {
     color: white;
-    margin-right: 15px;
+    margin: 0 ${props => props.right ? '0 0 20px' : '20px 0 0'};
   }
 `;

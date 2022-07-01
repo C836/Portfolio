@@ -6,8 +6,10 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { highlights } from "../../../data/projects/highlights";
 
 export default function Highlight(props: Config) {
+  const { right } = props
+
   return (
-    <S.Highlight>
+    <S.Highlight right = {right}>
       <S.Border>
         <a target={"_blank"} href={highlights[0].links.web}>
           <S.Img_Wrapper>
@@ -22,11 +24,11 @@ export default function Highlight(props: Config) {
 
         <S.TechList>
           {highlights[0].tech.map((item: any, index: number) => (
-            <S.Tech key={index}>{item}</S.Tech>
+            <S.Tech right = {right} key={index}>{item}</S.Tech>
           ))}
         </S.TechList>
 
-        <S.Links>
+        <S.Links right = {right}>
           <li>
             <a target={"_blank"} href={highlights[0].links.github}>
               <FaGithub />
