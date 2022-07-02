@@ -12,10 +12,12 @@ import Typewriter from "typewriter-effect";
 import { socials } from "../../data/socials";
 
 export default function Intro(props: Config) {
+  const { IntroRef } = props;
+
   const [nameActive, setActive] = useState(false);
 
   return (
-    <S.Intro>
+    <S.Intro ref={IntroRef}>
       <S.Curriculo>
         <Button text="Currículo" />
       </S.Curriculo>

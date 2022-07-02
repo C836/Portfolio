@@ -14,6 +14,7 @@ body {
 }
 
 body {
+  overflow: hidden;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
