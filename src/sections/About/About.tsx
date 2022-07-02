@@ -6,8 +6,10 @@ import { icons } from "../../data/tech";
 import Slider from "../../components/Slider/Slider";
 
 export default function About(props: Config) {
+  const { AboutRef } = props;
+
   return (
-    <S.About>
+    <S.About ref={AboutRef}>
       <S.Slider>
         <h1>Front-End</h1>
         <Slider icons={icons.frontEnd} />
