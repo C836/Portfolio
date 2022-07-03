@@ -27,7 +27,14 @@ function App() {
   const handleScroll = (event: WheelEvent) => {
     const direction = getScrollDirection(event);
 
-    setPageIndex(direction === "up" ? 0 : 1);
+    if (direction === "up" && currentPageIndex > 0) {
+      setPageIndex(currentPageIndex - 1);
+    } else if (
+      direction === "down" &&
+      currentPageIndex < appSections.length - 1
+    ) {
+      setPageIndex(currentPageIndex + 1);
+    }
   };
 
   useEffect(()=> {
