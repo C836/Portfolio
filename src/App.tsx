@@ -8,21 +8,25 @@ import About from "./sections/About/About";
 import Highlights from "./sections/Projects/Highlights/Highlights";
 
 interface RefsConfig {
-  [key: string]: React.RefObject<HTMLElement>
+  [key: string]: React.RefObject<HTMLElement>;
 }
 
 function App() {
-  const appSections = [ "IntroRef", "AboutRef" ]
+  const appSections = ["IntroRef", "AboutRef", "HighlightRef1", "HighlightRef2", "HighlightRef3"];
   const [currentPageIndex, setPageIndex] = useState(0);
 
-  const scroll = (scrollSection:string) => {
+  const scroll = (scrollSection: string) => {
     Refs[scrollSection].current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const Refs:RefsConfig = {
-    IntroRef : useRef<HTMLElement>(null),
-    AboutRef : useRef<HTMLElement>(null)
-  } 
+  const Refs: RefsConfig = {
+    IntroRef: useRef<HTMLElement>(null),
+    AboutRef: useRef<HTMLElement>(null),
+
+    HighlightRef1: useRef<HTMLElement>(null),
+    HighlightRef2: useRef<HTMLElement>(null),
+    HighlightRef3: useRef<HTMLElement>(null),
+  };
 
   const handleScroll = (event: WheelEvent) => {
     const direction = getScrollDirection(event);
@@ -37,11 +41,12 @@ function App() {
     }
   };
 
-  useEffect(()=> {
-    const currentPageSection = appSections[currentPageIndex]
+  useEffect(() => {
+    console.log(currentPageIndex);
+    const currentPageSection = appSections[currentPageIndex];
 
-    scroll(currentPageSection)
-  }, [currentPageIndex])
+    scroll(currentPageSection);
+  }, [currentPageIndex]);
 
   return (
     <div onWheel={handleScroll}>
@@ -49,7 +54,11 @@ function App() {
       <Intro IntroRef={Refs.IntroRef} />
       <div className="app">
         <About AboutRef={Refs.AboutRef} />
-        <Highlights />
+        <Highlights
+          HighlightRef1={Refs.HighlightRef1}
+          HighlightRef2={Refs.HighlightRef2}
+          HighlightRef3={Refs.HighlightRef3}
+        />
       </div>
     </div>
   );

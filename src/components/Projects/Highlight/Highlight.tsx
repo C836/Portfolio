@@ -1,15 +1,15 @@
 import * as S from "./Highlight.styled";
 import { Config } from "./Highlight.config";
 
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import { highlights } from "../../../data/projects/highlights";
 
 export default function Highlight(props: Config) {
-  const { right } = props
+  const { HighlightRef, right } = props;
 
   return (
-    <S.Highlight right = {right}>
+    <S.Highlight ref={HighlightRef} right={right}>
       <S.Border>
         <a target={"_blank"} href={highlights[0].links.web}>
           <S.Img_Wrapper>
@@ -24,11 +24,13 @@ export default function Highlight(props: Config) {
 
         <S.TechList>
           {highlights[0].tech.map((item: any, index: number) => (
-            <S.Tech right = {right} key={index}>{item}</S.Tech>
+            <S.Tech right={right} key={index}>
+              {item}
+            </S.Tech>
           ))}
         </S.TechList>
 
-        <S.Links right = {right}>
+        <S.Links right={right}>
           <li>
             <a target={"_blank"} href={highlights[0].links.github}>
               <FaGithub />
