@@ -26,10 +26,4 @@ export const TextField = styled.article`
   width: 50%;
   font: 1.1rem 'Nunito';
   color: white;
-
-  & h1 {
-    font: bold 4rem 'Ubuntu Mono';
-    margin: 0;
-    margin-bottom: 30px;
-  }
 `;
