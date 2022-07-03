@@ -16,7 +16,11 @@ function App() {
   const [currentPageIndex, setPageIndex] = useState(0);
 
   const scroll = (scrollSection: string) => {
-    Refs[scrollSection].current?.scrollIntoView({ behavior: "smooth" });
+    Refs[scrollSection].current?.
+      scrollIntoView({ 
+      behavior: "smooth",
+      block: 'center',
+      inline: 'center' });
   };
 
   const Refs: RefsConfig = {
