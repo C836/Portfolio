@@ -8,23 +8,25 @@ import { projects } from "../../data/projects/projects";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Project(props: Config) {
+  const { techs, nome, descricao, links } = props;
+
   return (
     <S.Project>
       <S.Techs>
-        {projects[0].techs.map((item, index) => (
+        {techs.map((item, index) => (
           <S.Tech>{item}</S.Tech>
         ))}
       </S.Techs>
-      <h3>{projects[0].nome}</h3>
-      <Text>{projects[0].descricao.slice(0, 120) + "..."}</Text>
+      <h3>{nome}</h3>
+      <Text>{descricao.slice(0, 120) + "..."}</Text>
       <S.Links>
         <li>
-          <a target={"_blank"} href={projects[0].links.github}>
+          <a target={"_blank"} href={links.github}>
             <FaGithub />
           </a>
         </li>
         <li>
-          <a target={"_blank"} href={projects[0].links.web}>
+          <a target={"_blank"} href={links.web}>
             <FaExternalLinkAlt />
           </a>
         </li>
