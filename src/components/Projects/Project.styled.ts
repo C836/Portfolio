@@ -6,7 +6,41 @@ export const Project = styled.div`
   position: relative;
   transition: transform 0.2s;
   box-sizing: border-box;
-  border: 3px solid white;
+  border: 3px solid transparent;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0; left: 0;
+    border: 3px solid white;
+    background-color: black;
+    transform: translate(-3px, -3px);
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    border: 3px solid #ffffff30;
+    background-color: black;
+    transform: translate(10px, 10px);
+    transition: 0.2s;
+  }
+
+  &:hover {
+    transform: translate(5px, 5px);
+
+    &::after {
+      transform: translate(-3px, -3px);
+    }
+  }
 
   & h3 {
     font: 2rem "Ubuntu Mono";
