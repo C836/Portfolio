@@ -8,7 +8,7 @@ export const Highlight = styled.section<Highlight>`
   display: flex;
   align-items: center;
 
-  margin: 0;
+  margin: ${props => props.right ? '50px 0' : '0'};
   width: 100%;
   
   direction: ${props => props.right ? 'rtl' : 'ltr'};
