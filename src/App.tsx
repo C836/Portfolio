@@ -7,13 +7,14 @@ import Intro from "./sections/Intro/Intro";
 import About from "./sections/About/About";
 import Highlights from "./sections/Projects/Highlights/Highlights";
 import Pagination from "./components/Pagination/Pagination";
+import Extras from "./sections/Projects/Extras/Extras";
 
 interface RefsConfig {
   [key: string]: React.RefObject<HTMLElement>;
 }
 
 function App() {
-  const appSections = ["IntroRef", "AboutRef", "HighlightRef1", "HighlightRef2", "HighlightRef3"];
+  const appSections = ["IntroRef", "AboutRef", "HighlightRef1", "HighlightRef2", "HighlightRef3", "ExtraRef1", "ExtraRef2"];
   const [currentPageIndex, setPageIndex] = useState(0);
 
   const scroll = (scrollSection: string) => {
@@ -31,6 +32,9 @@ function App() {
     HighlightRef1: useRef<HTMLElement>(null),
     HighlightRef2: useRef<HTMLElement>(null),
     HighlightRef3: useRef<HTMLElement>(null),
+
+    ExtraRef1: useRef<HTMLElement>(null),
+    ExtraRef2: useRef<HTMLElement>(null)
   };
 
   const handleScroll = (event: WheelEvent) => {
@@ -67,6 +71,9 @@ function App() {
           HighlightRef2={Refs.HighlightRef2}
           HighlightRef3={Refs.HighlightRef3}
         />
+        <Extras
+          ExtraRef1={Refs.ExtraRef1}
+          ExtraRef2={Refs.ExtraRef2} />
       </div>
     </div>
   );
