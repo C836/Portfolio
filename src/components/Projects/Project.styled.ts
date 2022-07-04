@@ -45,6 +45,12 @@ export const Project = styled.div`
   & h3 {
     font: 2rem "Ubuntu Mono";
     line-height: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  & p{ 
+    margin-bottom: 10px;
   }
 `;
 
@@ -52,13 +58,19 @@ export const Cover = styled.img`
   width: 100%;
 `;
 
-export const Tech = styled.figure`
-  font-size: 40px;
-  line-height: 0;
-  margin: 0;
+export const Techs = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
   position: absolute;
   bottom: 15px;
   right: 15px;
+  column-gap: 12px;
+`
+
+export const Tech = styled.figure`
+  font-size: 30px;
+  line-height: 0;
+  margin: 0;
 `;
 
 export const Links = styled.ul`

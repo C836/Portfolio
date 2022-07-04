@@ -10,10 +10,13 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 export default function Project(props: Config) {
   return (
     <S.Project>
-      <S.Tech>{projects[0].tech}</S.Tech>
-      <S.Cover src={projects[0].cover} />
+      <S.Techs>
+        {projects[0].techs.map((item, index) => (
+          <S.Tech>{item}</S.Tech>
+        ))}
+      </S.Techs>
       <h3>{projects[0].nome}</h3>
-      <Text>{projects[0].descricao.slice(0, 100) + "..."}</Text>
+      <Text>{projects[0].descricao.slice(0, 120) + "..."}</Text>
       <S.Links>
         <li>
           <a target={"_blank"} href={projects[0].links.github}>
