@@ -6,6 +6,7 @@ import { GlobalStyle } from "./global";
 import Intro from "./sections/Intro/Intro";
 import About from "./sections/About/About";
 import Highlights from "./sections/Projects/Highlights/Highlights";
+import Pagination from "./components/Pagination/Pagination";
 
 interface RefsConfig {
   [key: string]: React.RefObject<HTMLElement>;
@@ -55,6 +56,9 @@ function App() {
   return (
     <div onWheel={handleScroll}>
       <GlobalStyle />
+      <Pagination 
+      pageIndex={currentPageIndex}
+      sections = {appSections} />
       <Intro IntroRef={Refs.IntroRef} />
       <div className="app">
         <About AboutRef={Refs.AboutRef} />
