@@ -1,3 +1,4 @@
 export interface Config{
-    text: string
+    text: string;
+    colored?: boolean;
 }
