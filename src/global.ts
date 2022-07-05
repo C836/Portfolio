@@ -16,7 +16,7 @@ body {
 body {
   overflow: hidden;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   opacity: 1;
 }
