@@ -24,48 +24,30 @@ export default function Form() {
   };
 
   return (
-    <section>
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-      >
-        <div>
-          <div>
-            <input type="text" name="nome" placeholder="Nome" required={true} />
+    <S.Form ref={formRef} onSubmit={handleSubmit}>
+      <fieldset>
+        <S.Input type="text" name="nome" placeholder="Nome" required={true} />
 
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              required={true}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              name="assunto"
-              placeholder="Assunto"
-              required={true}
-            />
-          </div>
-          <div>
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              placeholder="Sua mensagem"
-            />
-          </div>
-        </div>
-        <div className="flex w-full">
-          <div>
-            <Button text="Enviar" />
-          </div>
-          <div>
-            <Button text="Limpar" />
-          </div>
-        </div>
-      </form>
-    </section>
+        <S.Input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required={true}
+        />
+      </fieldset>
+
+      <S.Input
+        type="text"
+        name="assunto"
+        placeholder="Assunto"
+        required={true}
+      />
+      <S.Textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" />
+      <S.Buttons>
+        <Button colored text="Enviar" />
+        <Button text="Limpar" />
+      </S.Buttons>
+    </S.Form>
   );
 }
