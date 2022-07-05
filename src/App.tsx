@@ -8,6 +8,7 @@ import About from "./sections/About/About";
 import Highlights from "./sections/Projects/Highlights/Highlights";
 import Pagination from "./components/Pagination/Pagination";
 import Extras from "./sections/Projects/Extras/Extras";
+import { Background } from "./layout/Background/Background.styled";
 
 interface RefsConfig {
   [key: string]: React.RefObject<HTMLElement>;
@@ -60,6 +61,7 @@ function App() {
   return (
     <div onWheel={handleScroll}>
       <GlobalStyle />
+      <Background />
       <Pagination 
       pageIndex={currentPageIndex}
       sections = {appSections} />
