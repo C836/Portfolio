@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Project = styled.div`
-  width: 350px;
   padding: 20px;
   position: relative;
   transition: transform 0.2s;
