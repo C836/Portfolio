@@ -5,6 +5,7 @@ export const Extras = styled.section`
   flex-direction: column;
 
   margin: 80px 0;
+  padding-bottom: calc(50vh - 270px);
 `;
 
 export const Wrapper = styled.section`
