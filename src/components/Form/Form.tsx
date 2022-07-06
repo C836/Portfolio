@@ -23,6 +23,11 @@ export default function Form() {
     alert("Mensagem enviada!");
   };
 
+  const reset = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    formRef.current?.reset();
+  }
+
   return (
     <S.Form ref={formRef} onSubmit={handleSubmit}>
       <fieldset>
@@ -46,7 +51,7 @@ export default function Form() {
       <S.Textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" />
       <S.Buttons>
         <Button colored transparent text="Enviar" />
-        <Button transparent text="Limpar" />
+        <Button onClick={reset} transparent text="Limpar" />
       </S.Buttons>
     </S.Form>
   );
