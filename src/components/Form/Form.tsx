@@ -11,7 +11,7 @@ export default function Form() {
 
   const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     emailjs.sendForm(
       apiKey.SERVICE_ID,
@@ -19,7 +19,7 @@ export default function Form() {
       formRef.current || "",
       apiKey.PUBLIC_KEY
     );
-    e.target.reset();
+    formRef.current?.reset();
     alert("Mensagem enviada!");
   };
 
