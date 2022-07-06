@@ -11,6 +11,11 @@ body {
   margin: 0;
   box-sizing: border-box;
   color: white;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {
