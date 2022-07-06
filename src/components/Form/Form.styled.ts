@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -21,8 +20,7 @@ const input_styles = `
   padding: 15px;
   box-sizing: border-box;
   border: 3px solid white;
-  background: black;
-  background: black;
+  background: #00000050;
   color: white;
   font: 1.2rem "Nunito";
 `;

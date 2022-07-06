@@ -45,8 +45,8 @@ export default function Form() {
       />
       <S.Textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" />
       <S.Buttons>
-        <Button colored text="Enviar" />
-        <Button text="Limpar" />
+        <Button colored transparent text="Enviar" />
+        <Button transparent text="Limpar" />
       </S.Buttons>
     </S.Form>
   );
