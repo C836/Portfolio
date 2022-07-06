@@ -10,6 +10,7 @@ import Pagination from "./components/Pagination/Pagination";
 import Extras from "./sections/Projects/Extras/Extras";
 import { Background } from "./layout/Background/Background.styled";
 import Contact from "./sections/Contact/Contact";
+import useWindowDimensions from "./utils/WindowDimensions";
 
 interface RefsConfig {
   [key: string]: React.RefObject<HTMLElement>;
@@ -18,6 +19,8 @@ interface RefsConfig {
 function App() {
   const appSections = ["IntroRef", "AboutRef", "HighlightRef1", "HighlightRef2", "HighlightRef3", "ExtraRef1", "ExtraRef2", "ContactRef"];
   const [currentPageIndex, setPageIndex] = useState(0);
+
+  const { width, height } = useWindowDimensions()
 
   const scroll = (scrollSection: string) => {
     Refs[scrollSection].current?.
@@ -65,9 +68,13 @@ function App() {
     <div onWheel={handleScroll}>
       <GlobalStyle />
       <Background />
-      <Pagination 
-      pageIndex={currentPageIndex}
-      sections = {appSections} />
+
+      { 
+        width > 850 && <Pagination 
+        pageIndex={currentPageIndex}
+        sections = {appSections} /> 
+      }
+
       <Intro IntroRef={Refs.IntroRef} />
       <div className="app">
         <About AboutRef={Refs.AboutRef} />
