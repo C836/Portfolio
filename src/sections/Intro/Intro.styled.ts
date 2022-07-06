@@ -46,6 +46,18 @@ export const TextField = styled.article`
       margin-bottom: 2em;
     }
   }
+
+  @media only screen and (max-width: 650px) {
+    width: 90%;
+
+    & p {
+      width: 100%;
+    }
+
+    & h2 {
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 export const Name = styled.div`
@@ -53,7 +65,7 @@ export const Name = styled.div`
 `;
 
 export const NameWrapper = styled.div`
-  font: 600 clamp(35px, 7vw, 80px) "Ubuntu Mono";
+  font: 600 clamp(1.5rem, 7vw, 80px) "Ubuntu Mono";
   white-space: nowrap;
 
   & h1 {
