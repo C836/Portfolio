@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 interface Button {
   colored?: boolean;
+  transparent?: boolean;
 }
 
 export const Button = styled.button<Button>`
   padding: 18px 27px;
   font: 500 1.2rem "Roboto", sans-serif;
-  background: black;
+  background: ${(props) => (props.transparent ? "transparent" : "black")};
   outline: none;
   cursor: pointer;
   transition: all 0.3s ease;
