@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Contact = styled.div`
+export const Contact = styled.section`
   height: 100vh;
   display: flex;
   align-items: center;
