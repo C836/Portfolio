@@ -18,6 +18,7 @@ export default function Intro(props: Config) {
 
   return (
     <S.Intro ref={IntroRef}>
+      <S.Background />
       <S.Curriculo>
         <Button text="Currículo" />
       </S.Curriculo>

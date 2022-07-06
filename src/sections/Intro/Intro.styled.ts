@@ -1,5 +1,34 @@
 import styled from "styled-components";
 
+export const Intro = styled.section`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito";
+`;
+
+export const Background = styled.div`
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: -5;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6) 50% 62%;
+    background-size: cover;
+    opacity: .1;
+    filter: saturate(0) ;
+  }
+`;
+
 export const Curriculo = styled.div`
   position: absolute;
   top: 30px;
@@ -68,13 +97,4 @@ export const Hand = styled.span`
       transform: rotate(0deg);
     }
   }
-`;
-
-export const Intro = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Nunito";
 `;
