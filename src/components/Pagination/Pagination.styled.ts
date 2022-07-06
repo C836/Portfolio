@@ -12,10 +12,11 @@ export const Pagination = styled.div`
   row-gap: 50px;
   display: grid;
   flex-direction: column;
+  z-index: 5;
 `;
 
 export const Dots = styled.div<Pagination>`
-  &&::after {
+  &::after {
     content: '';
     position: absolute;
     width: 10px;
