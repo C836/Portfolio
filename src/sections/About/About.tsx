@@ -11,13 +11,6 @@ export default function About(props: Config) {
 
   return (
     <S.About ref={AboutRef}>
-      <S.Slider>
-        <h1>Front-End</h1>
-        <Slider icons={icons.frontEnd} />
-        <h1>Back-End +</h1>
-        <Slider icons={icons.backEndEtc} />
-      </S.Slider>
-
       <S.TextField>
         <Title>About.me</Title>
         <Text>
@@ -34,6 +27,12 @@ export default function About(props: Config) {
           sollicitudin suscipit enim. Nunc viverra viverra ornare.
         </Text>
       </S.TextField>
+      <S.Slider>
+        <h1>Front-End</h1>
+        <Slider icons={icons.frontEnd} />
+        <h1>Back-End +</h1>
+        <Slider icons={icons.backEndEtc} />
+      </S.Slider>
     </S.About>
   );
 }
