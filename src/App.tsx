@@ -13,7 +13,8 @@ import Contact from "./sections/Contact/Contact";
 import useWindowDimensions from "./utils/WindowDimensions";
 
 interface RefsConfig {
-  [key: string]: React.RefObject<HTMLElement>;
+
+  [key: string]:{ref: React.RefObject<HTMLElement>, block: ScrollLogicalPosition};
 }
 
 function App() {
@@ -23,25 +24,25 @@ function App() {
   const { width, height } = useWindowDimensions()
 
   const scroll = (scrollSection: string) => {
-    Refs[scrollSection].current?.
+    Refs[scrollSection].ref.current?.
       scrollIntoView({ 
       behavior: "smooth",
-      block: 'center',
+      block: Refs[scrollSection].block,
       inline: 'center' });
   };
 
   const Refs: RefsConfig = {
-    IntroRef: useRef<HTMLElement>(null),
-    AboutRef: useRef<HTMLElement>(null),
+    IntroRef: {ref: useRef<HTMLElement>(null), block: "start"},
+    AboutRef: {ref: useRef<HTMLElement>(null), block: "start"},
 
-    HighlightRef1: useRef<HTMLElement>(null),
-    HighlightRef2: useRef<HTMLElement>(null),
-    HighlightRef3: useRef<HTMLElement>(null),
+    HighlightRef1: {ref: useRef<HTMLElement>(null), block: "center"},
+    HighlightRef2: {ref: useRef<HTMLElement>(null), block: "center"},
+    HighlightRef3: {ref: useRef<HTMLElement>(null), block: "center"},
 
-    ExtraRef1: useRef<HTMLElement>(null),
-    ExtraRef2: useRef<HTMLElement>(null),
+    ExtraRef1: {ref: useRef<HTMLElement>(null), block: "center"},
+    ExtraRef2: {ref: useRef<HTMLElement>(null), block: "center"},
 
-    ContactRef: useRef<HTMLElement>(null)
+    ContactRef: {ref: useRef<HTMLElement>(null), block: "start"}
   };
 
   const handleScroll = (event: WheelEvent) => {
@@ -66,6 +67,7 @@ function App() {
 
   return (
     <div onWheel={handleScroll}>
+      <p style={{position: "fixed", color: "white"}}>{width}</p>
       <GlobalStyle />
       <Background />
 
@@ -75,20 +77,20 @@ function App() {
         sections = {appSections} /> 
       }
 
-      <Intro IntroRef={Refs.IntroRef} />
+      <Intro IntroRef={Refs.IntroRef.ref} />
       <div className="app">
-        <About AboutRef={Refs.AboutRef} />
+        <About AboutRef={Refs.AboutRef.ref} />
         <Highlights
-          HighlightRef1={Refs.HighlightRef1}
-          HighlightRef2={Refs.HighlightRef2}
-          HighlightRef3={Refs.HighlightRef3}
+          HighlightRef1={Refs.HighlightRef1.ref}
+          HighlightRef2={Refs.HighlightRef2.ref}
+          HighlightRef3={Refs.HighlightRef3.ref}
         />
         <Extras
-          ExtraRef1={Refs.ExtraRef1}
-          ExtraRef2={Refs.ExtraRef2} />
+          ExtraRef1={Refs.ExtraRef1.ref}
+          ExtraRef2={Refs.ExtraRef2.ref} />
 
         <Contact
-          ContactRef={Refs.ContactRef} />
+          ContactRef={Refs.ContactRef.ref} />
       </div>
     </div>
   );
