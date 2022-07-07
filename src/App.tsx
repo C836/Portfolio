@@ -13,36 +13,49 @@ import Contact from "./sections/Contact/Contact";
 import useWindowDimensions from "./utils/WindowDimensions";
 
 interface RefsConfig {
-
-  [key: string]:{ref: React.RefObject<HTMLElement>, block: ScrollLogicalPosition};
+  [key: string]: {
+    ref: React.RefObject<HTMLElement>;
+    block: ScrollLogicalPosition;
+  };
 }
 
 function App() {
-  const appSections = ["IntroRef", "AboutRef", "HighlightRef1", "HighlightRef2", "HighlightRef3", "ExtraRef1", "ExtraRef2", "ContactRef"];
+  const appSections = [
+    "IntroRef",
+    "AboutRef",
+    "HighlightRef1",
+    "HighlightRef2",
+    "HighlightRef3",
+    "ExtraRef1",
+    "ExtraRef2",
+    "ContactRef",
+  ];
   const [currentPageIndex, setPageIndex] = useState(0);
 
-  const { width, height } = useWindowDimensions()
+  const { width } = useWindowDimensions();
 
   const scroll = (scrollSection: string) => {
-    Refs[scrollSection].ref.current?.
-      scrollIntoView({ 
+    const selected_Section = Refs[scrollSection];
+
+    selected_Section.ref.current?.scrollIntoView({
       behavior: "smooth",
-      block: Refs[scrollSection].block,
-      inline: 'center' });
+      block: selected_Section.block,
+      inline: "center",
+    });
   };
 
   const Refs: RefsConfig = {
-    IntroRef: {ref: useRef<HTMLElement>(null), block: "start"},
-    AboutRef: {ref: useRef<HTMLElement>(null), block: "start"},
+    IntroRef: { ref: useRef<HTMLElement>(null), block: "start" },
+    AboutRef: { ref: useRef<HTMLElement>(null), block: "start" },
 
-    HighlightRef1: {ref: useRef<HTMLElement>(null), block: "center"},
-    HighlightRef2: {ref: useRef<HTMLElement>(null), block: "center"},
-    HighlightRef3: {ref: useRef<HTMLElement>(null), block: "center"},
+    HighlightRef1: { ref: useRef<HTMLElement>(null), block: "center" },
+    HighlightRef2: { ref: useRef<HTMLElement>(null), block: "center" },
+    HighlightRef3: { ref: useRef<HTMLElement>(null), block: "center" },
 
-    ExtraRef1: {ref: useRef<HTMLElement>(null), block: "center"},
-    ExtraRef2: {ref: useRef<HTMLElement>(null), block: "center"},
+    ExtraRef1: { ref: useRef<HTMLElement>(null), block: "center" },
+    ExtraRef2: { ref: useRef<HTMLElement>(null), block: "center" },
 
-    ContactRef: {ref: useRef<HTMLElement>(null), block: "start"}
+    ContactRef: { ref: useRef<HTMLElement>(null), block: "start" },
   };
 
   const handleScroll = (event: WheelEvent) => {
@@ -59,7 +72,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(currentPageIndex);
     const currentPageSection = appSections[currentPageIndex];
 
     scroll(currentPageSection);
@@ -67,15 +79,12 @@ function App() {
 
   return (
     <div onWheel={handleScroll}>
-      <p style={{position: "fixed", color: "white"}}>{width}</p>
       <GlobalStyle />
       <Background />
 
-      { 
-        width > 850 && <Pagination 
-        pageIndex={currentPageIndex}
-        sections = {appSections} /> 
-      }
+      {width > 850 && (
+        <Pagination pageIndex={currentPageIndex} sections={appSections} />
+      )}
 
       <Intro IntroRef={Refs.IntroRef.ref} />
       <div className="app">
@@ -85,12 +94,9 @@ function App() {
           HighlightRef2={Refs.HighlightRef2.ref}
           HighlightRef3={Refs.HighlightRef3.ref}
         />
-        <Extras
-          ExtraRef1={Refs.ExtraRef1.ref}
-          ExtraRef2={Refs.ExtraRef2.ref} />
+        <Extras ExtraRef1={Refs.ExtraRef1.ref} ExtraRef2={Refs.ExtraRef2.ref} />
 
-        <Contact
-          ContactRef={Refs.ContactRef.ref} />
+        <Contact ContactRef={Refs.ContactRef.ref} />
       </div>
     </div>
   );
