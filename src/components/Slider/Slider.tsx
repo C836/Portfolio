@@ -7,11 +7,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 
 import "swiper/css";
+import useWindowDimensions from "../../utils/WindowDimensions";
+import { IconContext } from "react-icons";
 
 export default function Slider(props: Config) {
   const { icons } = props;
 
   const [actualIndex, setIndex] = useState(0);
+
+  const { width } = useWindowDimensions()
 
   const isCentered = (index: number, number_of_icons: number) => {
     if (
@@ -26,7 +30,11 @@ export default function Slider(props: Config) {
 
   return (
     <Swiper
-      slidesPerView={3}
+      slidesPerView={
+        width < 400
+        ? 2
+        : 3
+      }
       spaceBetween={20}
       autoplay={{
         delay: 3000,
@@ -50,8 +58,14 @@ export default function Slider(props: Config) {
             active={isCentered(index, icons.length - 1) ? true : false}
             color={item.color}
           >
-            <figure>{item.icon}</figure>
-            <p>{item.name}</p>
+            <IconContext.Provider
+            value={{size: width < 400
+            ? "70px"
+            : "60px"}}
+            >
+              <figure>{item.icon}</figure>
+              <p>{item.name}</p>
+            </IconContext.Provider>
           </S.Icon>
         </SwiperSlide>
       ))}

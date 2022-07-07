@@ -23,4 +23,12 @@ export const Icon = styled.span<Icon>`
     margin-top: 0.5em;
     font: 1.2rem "Ubuntu Mono";
   }
+
+  @media (max-width: 400px){
+  	transform: translateX(-55%);
+
+    & p {
+      font: 1.5rem "Ubuntu Mono";
+    }
+  }
 `;
