@@ -11,6 +11,7 @@ export const About = styled.section`
   @media (max-width: 1000px) {
     flex-direction: column;
     width: 100%;
+    height: auto;
   }
 `;
 
