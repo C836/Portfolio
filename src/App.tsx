@@ -13,10 +13,7 @@ import Contact from "./sections/Contact/Contact";
 import useWindowDimensions from "./utils/WindowDimensions";
 
 interface RefsConfig {
-  [key: string]: {
-    ref: React.RefObject<HTMLElement>;
-    block: ScrollLogicalPosition;
-  };
+  [key: string]: any
 }
 
 function App() {
@@ -48,7 +45,7 @@ function App() {
     IntroRef: { ref: useRef<HTMLElement>(null), block: "start" },
     AboutRef: { ref: useRef<HTMLElement>(null), block: "start" },
 
-    HighlightRef1: { ref: useRef<HTMLElement>(null), block: "center" },
+    HighlightRef1: { ref: useRef<HTMLElement>(null), block: "start" },
     HighlightRef2: { ref: useRef<HTMLElement>(null), block: "center" },
     HighlightRef3: { ref: useRef<HTMLElement>(null), block: "center" },
 
