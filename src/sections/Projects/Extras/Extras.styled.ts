@@ -5,7 +5,7 @@ export const Extras = styled.section`
   flex-direction: column;
 
   margin: 80px 0;
-  padding-bottom: calc(50vh - 270px);
+  padding-bottom: 50vh;
 
   @media (max-width: 900px){
     margin: 0;
