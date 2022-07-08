@@ -24,6 +24,10 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   opacity: 1;
+
+  @media (max-width: 800px){
+  	overflow: auto;
+  }
 }
 
 .app{
