@@ -1,17 +1,23 @@
 import styled from "styled-components";
 
 interface Highlight {
-  right?: boolean
+  right?: boolean;
 }
 
 export const Highlight = styled.section<Highlight>`
   display: flex;
   align-items: center;
 
-  margin: ${props => props.right ? '50px 0' : '0'};
   width: 100%;
-  
-  direction: ${props => props.right ? 'rtl' : 'ltr'};
+
+  @media (min-width: 851px) {
+    margin: ${(props) => (props.right ? "50px 0" : "0")};
+    direction: ${(props) => (props.right ? "rtl" : "ltr")};
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
 `;
 
 export const Border = styled.figure`
@@ -19,18 +25,27 @@ export const Border = styled.figure`
   position: relative;
   width: 40%;
   margin: 0;
+  border: 4px solid white;
+
+  @media (max-width: 1050px) {
+    width: 60%;
+  }
+
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 `;
 
 export const Img_Wrapper = styled.div`
   position: relative;
   z-index: 1;
-  border: 4px solid white;
+
   & img {
     width: 100%;
   }
 `;
 
-export const TextField = styled.article`
+export const TextField = styled.article<Highlight>`
   width: 50%;
   margin-top: 40px;
   font-family: "Nunito";
@@ -47,6 +62,15 @@ export const TextField = styled.article`
     line-height: 1.75rem;
     text-align: justify;
   }
+
+  @media (max-width: 1050px) {
+    margin: 30px;
+    width: 40%;
+  }
+
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 `;
 
 export const TechList = styled.ul`
@@ -58,8 +82,11 @@ export const TechList = styled.ul`
 
 export const Tech = styled.li<Highlight>`
   font-size: 1rem;
+  margin-right: 18px;
 
-  margin: 0 ${props => props.right ? '0 0 18px' : '18px 0 0'};
+  @media (min-width: 851px) {
+    margin: 0 ${(props) => (props.right ? "0 0 18px" : "18px 0 0")};
+  }
 `;
 
 export const Links = styled.ul<Highlight>`
@@ -73,6 +100,10 @@ export const Links = styled.ul<Highlight>`
 
   & a {
     color: white;
-    margin: 0 ${props => props.right ? '0 0 20px' : '20px 0 0'};
+    margin-right: 20px;
+
+    @media (min-width: 851px) {
+      margin: 0 ${(props) => (props.right ? "0 0 20px" : "20px 0 0")};
+    }
   }
 `;
