@@ -1,4 +1,4 @@
 export interface Config {
-  HighlightRef: React.RefObject<HTMLElement>;
+  HighlightRef?: React.RefObject<HTMLElement>;
   right?: boolean;
 }
