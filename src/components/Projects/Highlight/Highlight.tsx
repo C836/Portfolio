@@ -11,6 +11,9 @@ export default function Highlight(props: Config) {
   return (
     <S.Highlight ref={HighlightRef} right={right}>
       <S.Border>
+        <S.IconWrapper right={right} color={highlights[0].tech.color}>
+          <S.Icon right={right}>{highlights[0].tech.icon}</S.Icon>
+        </S.IconWrapper>
         <a target={"_blank"} href={highlights[0].links.web}>
           <S.Img_Wrapper>
             <img src={highlights[0].cover} />
@@ -23,7 +26,7 @@ export default function Highlight(props: Config) {
         <p>{highlights[0].descricao}</p>
 
         <S.TechList>
-          {highlights[0].tech.map((item: any, index: number) => (
+          {highlights[0].techs.map((item: any, index: number) => (
             <S.Tech right={right} key={index}>
               {item}
             </S.Tech>

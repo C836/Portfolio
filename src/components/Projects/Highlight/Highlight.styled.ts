@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 interface Highlight {
   right?: boolean;
+  color?: string;
 }
 
 export const Highlight = styled.section<Highlight>`
   display: flex;
   align-items: center;
-
   width: 100%;
 
   @media (min-width: 851px) {
@@ -26,6 +26,7 @@ export const Border = styled.figure`
   width: 40%;
   margin: 0;
   border: 4px solid white;
+  overflow: hidden;
 
   @media (max-width: 1050px) {
     width: 60%;
@@ -35,6 +36,30 @@ export const Border = styled.figure`
     width: 100%;
   }
 `;
+
+export const IconWrapper = styled.figure<Highlight>`
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  line-height: 0;
+  position: absolute;
+  top: -35px;
+  right: ${(props)=> !props.right && "-35px"};
+  left: ${(props)=> props.right && "-35px"};
+  margin: 0;
+  border-radius: 50%;
+  background-color: ${(props)=> props.color};
+  z-index: 2;
+  border: 2px solid white;
+`
+
+export const Icon = styled.figure<Highlight>`
+  margin: 0;
+  position: absolute;
+  bottom: 18px;
+  right: ${(props)=> props.right && "18px"};
+  left: ${(props)=> !props.right && "18px"};
+`
 
 export const Img_Wrapper = styled.div`
   position: relative;
