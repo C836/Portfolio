@@ -8,20 +8,22 @@ export default function Contact(props: Config) {
   const { ContactRef } = props;
 
   return (
-    <S.Contact ref={ ContactRef }>
-      <S.Email>
-        <Title>Contact.me</Title>
+    <S.Contact ref={ContactRef}>
+      <S.ContentWrapper>
+        <S.Email>
+          <Title>Contact.me</Title>
 
-        <S.Wrapper>
-          <Text>
-            Caso tenha algum interesse profissional ou queira trocar uma idéia
-            comigo, me envie um email atráves do formulário abaixo ou pelas
-            ícones ao lado. Tentarei responder o mais rápido possível!
-          </Text>
-        </S.Wrapper>
+          <S.TextWrapper>
+            <Text>
+              Caso tenha algum interesse profissional ou queira trocar uma idéia
+              comigo, me envie um email atráves do formulário abaixo ou pelas
+              ícones ao lado. Tentarei responder o mais rápido possível!
+            </Text>
+          </S.TextWrapper>
 
-        <Form />
-      </S.Email>
+          <Form />
+        </S.Email>
+      </S.ContentWrapper>
     </S.Contact>
   );
 }
