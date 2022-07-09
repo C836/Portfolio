@@ -84,7 +84,7 @@ function App() {
       )}
 
       <Intro IntroRef={Refs.IntroRef.ref} />
-      <div className="app">
+      <div className="padding">
         <About AboutRef={Refs.AboutRef.ref} />
         <Highlights
           HighlightRef1={Refs.HighlightRef1.ref}
@@ -92,9 +92,9 @@ function App() {
           HighlightRef3={Refs.HighlightRef3.ref}
         />
         <Extras ExtraRef1={Refs.ExtraRef1.ref} ExtraRef2={Refs.ExtraRef2.ref} />
-
-        <Contact ContactRef={Refs.ContactRef.ref} />
       </div>
+
+      <Contact ContactRef={Refs.ContactRef.ref} />
     </div>
   );
 }

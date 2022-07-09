@@ -21,8 +21,6 @@ body {
 body {
   overflow: hidden;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
   opacity: 1;
 
   @media (max-width: 800px){
@@ -30,8 +28,10 @@ body {
   }
 }
 
-.app{
+.padding{
   padding: 0 5%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 `;
