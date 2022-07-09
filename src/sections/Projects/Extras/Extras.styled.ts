@@ -7,7 +7,11 @@ export const Extras = styled.section`
   margin: 80px 0;
   padding-bottom: 50vh;
 
-  @media (max-width: 900px){
+  @media (max-width: 800px){
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 800px){
     margin: 0;
   }
 `;
@@ -30,7 +34,7 @@ export const Wrapper = styled.section`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     margin: 20px 0;
 
