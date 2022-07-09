@@ -6,12 +6,12 @@ export const About = styled.section`
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  padding-top: 40px;
 
   @media (max-width: 1000px) {
     flex-direction: column;
     width: 100%;
     height: auto;
+    padding-top: 40px;
   }
 `;
 
