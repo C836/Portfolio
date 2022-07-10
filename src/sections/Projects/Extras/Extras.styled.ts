@@ -5,9 +5,11 @@ export const Extras = styled.section`
   flex-direction: column;
 
   margin: 80px 0;
+  padding-top: 10vh;
   padding-bottom: 50vh;
 
   @media (max-width: 800px){
+    padding-top: 0;
     padding-bottom: 80px;
   }
 
