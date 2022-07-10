@@ -6,27 +6,28 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { highlights } from "../../../data/projects/highlights";
 
 export default function Highlight(props: Config) {
-  const { HighlightRef, right } = props;
+  const { data, HighlightRef, right } = props;
+  const { nome, descricao, tech, techs, cover, gif, links } = data;
 
   return (
     <S.Highlight ref={HighlightRef} right={right}>
       <S.Border>
-        <S.IconWrapper right={right} color={highlights[0].tech.color}>
-          <S.Icon right={right}>{highlights[0].tech.icon}</S.Icon>
+        <S.IconWrapper right={right} color={tech.color}>
+          <S.Icon right={right}>{tech.icon}</S.Icon>
         </S.IconWrapper>
-        <a target={"_blank"} href={highlights[0].links.web}>
+        <a target={"_blank"} href={links.web}>
           <S.Img_Wrapper>
-            <img src={highlights[0].cover} />
+            <img src={cover} />
           </S.Img_Wrapper>
         </a>
       </S.Border>
 
       <S.TextField>
-        <h3>{highlights[0].nome}</h3>
-        <p>{highlights[0].descricao}</p>
+        <h3>{nome}</h3>
+        <p>{descricao}</p>
 
         <S.TechList>
-          {highlights[0].techs.map((item: any, index: number) => (
+          {techs.map((item: any, index: number) => (
             <S.Tech right={right} key={index}>
               {item}
             </S.Tech>
@@ -35,12 +36,12 @@ export default function Highlight(props: Config) {
 
         <S.Links right={right}>
           <li>
-            <a target={"_blank"} href={highlights[0].links.github}>
+            <a target={"_blank"} href={links.github}>
               <FaGithub />
             </a>
           </li>
           <li>
-            <a target={"_blank"} href={highlights[0].links.web}>
+            <a target={"_blank"} href={links.web}>
               <FaExternalLinkAlt />
             </a>
           </li>
