@@ -6,6 +6,7 @@ export const Project = styled.div`
   transition: transform 0.2s;
   box-sizing: border-box;
   border: 3px solid transparent;
+  min-height: 200px;
 
   &::before {
     content: "";
@@ -13,9 +14,10 @@ export const Project = styled.div`
     height: 100%;
     position: absolute;
     z-index: -1;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     border: 3px solid white;
-    background-color: black;
+    background: black;
     transform: translate(-3px, -3px);
   }
 
@@ -48,9 +50,17 @@ export const Project = styled.div`
     margin-bottom: 30px;
   }
 
-  & p{ 
-    margin-bottom: 10px;
+  & p {
+    margin-bottom: 45px;
   }
+`;
+
+export const Icon = styled.img`
+  position: absolute;
+  margin: 0;
+  top: 5px; right: 5px;
+  opacity: .1;
+  width: 180px;
 `;
 
 export const Cover = styled.img`
@@ -64,7 +74,7 @@ export const Techs = styled.div`
   bottom: 15px;
   right: 15px;
   column-gap: 12px;
-`
+`;
 
 export const Tech = styled.figure`
   font-size: 30px;
@@ -79,6 +89,8 @@ export const Links = styled.ul`
   margin: 0;
   list-style: none;
   display: flex;
+  position: absolute;
+  bottom: 20px;
 
   & a {
     display: block;

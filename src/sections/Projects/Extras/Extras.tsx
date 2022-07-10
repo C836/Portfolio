@@ -17,6 +17,7 @@ export default function Extras(props: Config) {
               techs={project.techs}
               nome={project.nome}
               descricao={project.descricao}
+              icon={project.icon}
               links={project.links}
             />
           ))}
