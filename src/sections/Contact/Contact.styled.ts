@@ -43,7 +43,7 @@ export const Email = styled.div`
   z-index: 1;
   width: 50%;
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     width: 100%;
   }
 `;
@@ -52,8 +52,54 @@ export const ContentWrapper = styled.div`
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 export const TextWrapper = styled.div`
   margin: 35px 0;
+`;
+
+export const Network = styled.div`
+  width: 50%;
+  position: relative;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Figure = styled.figure`
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 60%;
+  }
+  
+  @media (max-width: 900px){
+  	display: none;
+  }
+`;
+
+export const Links = styled.div`
+  display: flex;
+  column-gap: 20px;
+  margin-top: 20px;
+  font-size: 45px;
+
+  @media (max-width: 900px) {
+    margin-top: 40px;
+    font-size: 35px;
+  }
+`;
+
+export const Icon = styled.a`
+  color: white;
 `;
