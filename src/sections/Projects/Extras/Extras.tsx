@@ -10,28 +10,16 @@ export default function Extras(props: Config) {
 
   return (
     <S.Extras>
-      {projects.map((item, index) => (
-        <S.Wrapper
-        ref={ExtraRefs[index]}
-        >
-          <Project
-            techs={item[index].techs}
-            nome={item[index].nome}
-            descricao={item[index].descricao}
-            links={item[index].links}
-          />
-          <Project
-            techs={item[index].techs}
-            nome={item[index].nome}
-            descricao={item[index].descricao}
-            links={item[index].links}
-          />
-          <Project
-            techs={item[index].techs}
-            nome={item[index].nome}
-            descricao={item[index].descricao}
-            links={item[index].links}
-          />
+      {projects.map((list, index) => (
+        <S.Wrapper ref={ExtraRefs[index]}>
+          {list.map((project) => (
+            <Project
+              techs={project.techs}
+              nome={project.nome}
+              descricao={project.descricao}
+              links={project.links}
+            />
+          ))}
         </S.Wrapper>
       ))}
     </S.Extras>
