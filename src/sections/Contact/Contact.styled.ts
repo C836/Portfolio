@@ -32,6 +32,10 @@ export const Contact = styled.section`
     padding-top: 30px;
   }
 
+  p {
+    margin-bottom: 25px;
+  }
+
   @media (max-width: 800px) {
     padding: 30px 5% 0 5%;
     height: auto;
@@ -58,10 +62,6 @@ export const ContentWrapper = styled.div`
   @media (max-width: 900px) {
     flex-direction: column;
   }
-`;
-
-export const TextWrapper = styled.div`
-  margin: 35px 0;
 `;
 
 export const Network = styled.div`

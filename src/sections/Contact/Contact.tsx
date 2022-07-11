@@ -15,13 +15,11 @@ export default function Contact(props: Config) {
         <S.Email>
           <Title>Contact.me</Title>
 
-          <S.TextWrapper>
-            <Text>
-              Caso tenha algum interesse profissional ou queira trocar uma idéia
-              comigo, me envie um email atráves do formulário abaixo ou pelas
-              ícones ao lado. Tentarei responder o mais rápido possível!
-            </Text>
-          </S.TextWrapper>
+          <Text>
+            Caso tenha algum interesse profissional ou queira trocar uma idéia
+            comigo, me envie um email atráves do formulário abaixo ou pelas
+            ícones ao lado. Tentarei responder o mais rápido possível!
+          </Text>
 
           <Form />
         </S.Email>
