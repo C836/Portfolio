@@ -7,25 +7,31 @@ export const Intro = styled.section`
   justify-content: center;
   align-items: center;
   font-family: "Nunito";
+
+  & h2 {
+    margin: 25px 0;
+  }
 `;
 
 export const Background = styled.div`
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   background: black;
   z-index: -5;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6) 50% 62%;
+    background: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6)
+      50% 62%;
     background-size: cover;
-    opacity: .1;
-    filter: saturate(0) ;
+    opacity: 0.1;
+    filter: saturate(0);
   }
 `;
 
@@ -53,10 +59,6 @@ export const TextField = styled.article`
     & p {
       width: 100%;
     }
-
-    & h2 {
-      font-size: 1.2rem;
-    }
   }
 `;
 
@@ -70,7 +72,7 @@ export const NameWrapper = styled.div`
 
   & h1 {
     width: 100%;
-    margin: 0.8em 0;
+    margin: 25px 0;
     padding: 0;
     line-height: 0;
   }

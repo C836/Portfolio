@@ -40,8 +40,6 @@ export const Border = styled.figure`
 export const IconWrapper = styled.figure<Highlight>`
   width: 100px;
   height: 100px;
-  font-size: 40px;
-  line-height: 0;
   position: absolute;
   top: -35px;
   right: ${(props)=> !props.right && "-35px"};
@@ -73,20 +71,7 @@ export const Img_Wrapper = styled.div`
 export const TextField = styled.article<Highlight>`
   width: 50%;
   margin-top: 40px;
-  font-family: "Nunito";
   margin: 0 40px;
-
-  & h3 {
-    margin: 0;
-    font: bold 2rem "Ubuntu Mono";
-  }
-
-  & p {
-    margin-top: 18px;
-    font-size: 1.1rem;
-    line-height: 1.75rem;
-    text-align: justify;
-  }
 
   @media (max-width: 1050px) {
     margin: 30px;
@@ -103,11 +88,13 @@ export const TechList = styled.ul`
   display: flex;
   margin-top: 20px;
   padding: 0;
+  width: 100%;
+  flex-wrap: wrap;
 `;
 
 export const Tech = styled.li<Highlight>`
-  font-size: 1rem;
   margin-right: 18px;
+  margin-bottom: 8px;
 
   @media (min-width: 851px) {
     margin: 0 ${(props) => (props.right ? "0 0 18px" : "18px 0 0")};

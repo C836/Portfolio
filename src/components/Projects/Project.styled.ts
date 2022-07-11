@@ -6,7 +6,6 @@ export const Project = styled.div`
   transition: transform 0.2s;
   box-sizing: border-box;
   border: 3px solid transparent;
-  min-height: 200px;
 
   &::before {
     content: "";
@@ -43,15 +42,8 @@ export const Project = styled.div`
     }
   }
 
-  & h3 {
-    font: 2rem "Ubuntu Mono";
-    line-height: 0;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-
-  & p {
-    margin-bottom: 45px;
+  @media (max-width: 600px){
+  	padding: 16px;
   }
 `;
 
@@ -77,20 +69,17 @@ export const Techs = styled.div`
 `;
 
 export const Tech = styled.figure`
-  font-size: 30px;
+  font-size: 26px;
   line-height: 0;
   margin: 0;
 `;
 
 export const Links = styled.ul`
   color: white;
-  font-size: 26px;
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
-  position: absolute;
-  bottom: 20px;
 
   & a {
     display: block;
@@ -98,5 +87,6 @@ export const Links = styled.ul`
     line-height: 0;
     margin-top: 20px;
     margin-right: 15px;
+    font-size: 30px;
   }
 `;

@@ -19,14 +19,9 @@ export const Slider = styled.aside`
   position: relative;
   width: 45%;
   border: 3px solid white;
-  padding-bottom: 25px;
+  padding: 25px 0;
   background: black;
-
-  & h1 {
-    font: bold 2rem "Ubuntu Mono";
-    text-align: center;
-    margin-bottom: 50px;
-  }
+  text-align: center;
 
   &::after {
     content: "";
@@ -46,6 +41,10 @@ export const Slider = styled.aside`
     pointer-events: none;
   }
 
+  h2 {
+    margin-bottom: 30px;
+  }
+
   @media (max-width: 1000px) {
     margin-top: 30px;
     width: 100%;
@@ -58,7 +57,6 @@ export const TextField = styled.article`
   flex-direction: column;
   margin-left: 50px;
   width: 50%;
-  font: 1.1rem "Nunito";
   color: white;
   text-align: justify;
 
