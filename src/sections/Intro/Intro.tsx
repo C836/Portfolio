@@ -11,6 +11,7 @@ import Typewriter from "typewriter-effect";
 
 import { socials } from "../../data/socials";
 import useWindowDimensions from "../../utils/WindowDimensions";
+import { Subtitle, Text } from "../../components/Text/Text.styled";
 
 export default function Intro(props: Config) {
   const { IntroRef } = props;
@@ -30,9 +31,9 @@ export default function Intro(props: Config) {
       }
 
       <S.TextField>
-        <h2>
+        <Subtitle>
           Olá <S.Hand>👋</S.Hand>, meu nome é
-        </h2>
+        </Subtitle>
         <S.NameWrapper
           onMouseEnter={(e) => setActive(true)}
           onMouseLeave={(e) => setActive(false)}
@@ -64,13 +65,13 @@ export default function Intro(props: Config) {
           }
         </S.NameWrapper>
 
-        <h2>Sejam bem vindes ao meu portfólio 😎</h2>
+        <Subtitle>Sejam bem vindes ao meu portfólio 😎</Subtitle>
 
-        <p>
+        <Text>
           Sou um desenvolvedor web e designer gráfico. Abaixo você encontra um
           pouco mais sobre mim e alguns de meus projetos favoritos.
-        </p>
-        <p>Obrigado por estar aqui! 😄</p>
+        </Text>
+        <Text>Obrigado por estar aqui! 😄</Text>
 
         <Button text="Contato" />
       </S.TextField>

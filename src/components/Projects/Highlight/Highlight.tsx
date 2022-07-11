@@ -3,7 +3,7 @@ import { Config } from "./Highlight.config";
 
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-import { highlights } from "../../../data/projects/highlights";
+import { Small, Subtitle, Text } from "../../Text/Text.styled";
 
 export default function Highlight(props: Config) {
   const { data, HighlightRef, right } = props;
@@ -23,13 +23,13 @@ export default function Highlight(props: Config) {
       </S.Border>
 
       <S.TextField>
-        <h3>{nome}</h3>
-        <p>{descricao}</p>
+        <Subtitle>{nome}</Subtitle>
+        <Text>{descricao}</Text>
 
         <S.TechList>
           {techs.map((item: any, index: number) => (
             <S.Tech right={right} key={index}>
-              {item}
+              <Small>{item}</Small>
             </S.Tech>
           ))}
         </S.TechList>

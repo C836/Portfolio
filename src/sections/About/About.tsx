@@ -4,7 +4,7 @@ import { Config } from "./About.config";
 import { icons } from "../../data/tech";
 
 import Slider from "../../components/Slider/Slider";
-import { Title, Text } from "../../components/Text/Text.styled";
+import { Title, Text, Subtitle } from "../../components/Text/Text.styled";
 
 export default function About(props: Config) {
   const { AboutRef } = props;
@@ -28,9 +28,9 @@ export default function About(props: Config) {
         </Text>
       </S.TextField>
       <S.Slider>
-        <h1>Front-End</h1>
+        <Subtitle>Front-End</Subtitle>
         <Slider icons={icons.frontEnd} />
-        <h1>Back-End +</h1>
+        <Subtitle>Back-End +</Subtitle>
         <Slider icons={icons.backEndEtc} />
       </S.Slider>
     </S.About>
