@@ -5,5 +5,8 @@ export const Highlights = styled.section`
 `;
 
 export const List = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 20vh;
   margin: 30px 0;
 `;

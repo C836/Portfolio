@@ -6,14 +6,10 @@ interface Highlight {
 }
 
 export const Highlight = styled.section<Highlight>`
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-
-  @media (min-width: 851px) {
-    margin: ${(props) => (props.right ? "50px 0" : "0")};
-    direction: ${(props) => (props.right ? "rtl" : "ltr")};
-  }
 
   @media (max-width: 850px) {
     flex-direction: column;
@@ -21,11 +17,15 @@ export const Highlight = styled.section<Highlight>`
 `;
 
 export const Border = styled.figure`
+  --border-width: 6px;
+  
+  box-shadow: 
+    0 0 0 var(--border-width) black, 
+    0 0 0 calc(var(--border-width) + 2px) white ;
   object-fit: contain;
   position: relative;
   width: 40%;
   margin: 0;
-  border: 4px solid white;
   overflow: hidden;
 
   @media (max-width: 1050px) {
@@ -42,21 +42,19 @@ export const IconWrapper = styled.figure<Highlight>`
   height: 100px;
   position: absolute;
   top: -35px;
-  right: ${(props)=> !props.right && "-35px"};
-  left: ${(props)=> props.right && "-35px"};
+  right: -35px;
   margin: 0;
   border-radius: 50%;
   background-color: ${(props)=> props.color};
   z-index: 2;
-  border: 2px solid white;
+  border: 4px solid white;
 `
 
 export const Icon = styled.figure<Highlight>`
   margin: 0;
   position: absolute;
   bottom: 18px;
-  right: ${(props)=> props.right && "18px"};
-  left: ${(props)=> !props.right && "18px"};
+  left: 18px;
 `
 
 export const Img_Wrapper = styled.div`
@@ -65,16 +63,18 @@ export const Img_Wrapper = styled.div`
 
   & img {
     width: 100%;
+    vertical-align: middle;
   }
 `;
 
 export const TextField = styled.article<Highlight>`
-  width: 50%;
-  margin-top: 40px;
-  margin: 0 40px;
+  width: 60%;
+  max-width: 600px;
+  margin: 0;
+  margin-left: 40px;
 
   @media (max-width: 1050px) {
-    margin: 30px;
+    margin-left: 30px;
     width: 40%;
   }
 
@@ -95,10 +95,6 @@ export const TechList = styled.ul`
 export const Tech = styled.li<Highlight>`
   margin-right: 18px;
   margin-bottom: 8px;
-
-  @media (min-width: 851px) {
-    margin: 0 ${(props) => (props.right ? "0 0 18px" : "18px 0 0")};
-  }
 `;
 
 export const Links = styled.ul<Highlight>`
@@ -113,9 +109,5 @@ export const Links = styled.ul<Highlight>`
   & a {
     color: white;
     margin-right: 20px;
-
-    @media (min-width: 851px) {
-      margin: 0 ${(props) => (props.right ? "0 0 20px" : "20px 0 0")};
-    }
   }
 `;

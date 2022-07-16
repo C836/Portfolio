@@ -14,7 +14,7 @@ export default function Highlights(props: Config) {
 
       <S.List>
         <Highlight data={highlights[0]} />
-        <Highlight data={highlights[1]} HighlightRef={HighlightRef2} right />
+        <Highlight data={highlights[1]} HighlightRef={HighlightRef2} />
         <Highlight data={highlights[2]} HighlightRef={HighlightRef3} />
       </S.List>
     </S.Highlights>
