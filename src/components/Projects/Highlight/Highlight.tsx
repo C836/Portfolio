@@ -4,6 +4,8 @@ import { Config } from "./Highlight.config";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import { Small, Subtitle, Text } from "../../Text/Text.styled";
+import Button from "../../Button/Button";
+import { Button_Wrapper } from "../../Wrapper/Wrapper.styled";
 
 export default function Highlight(props: Config) {
   const { data, HighlightRef, right } = props;
@@ -35,16 +37,10 @@ export default function Highlight(props: Config) {
         </S.TechList>
 
         <S.Links right={right}>
-          <li>
-            <a target={"_blank"} href={links.github}>
-              <FaGithub />
-            </a>
-          </li>
-          <li>
-            <a target={"_blank"} href={links.web}>
-              <FaExternalLinkAlt />
-            </a>
-          </li>
+          <Button_Wrapper>
+            <Button alt transparent text="Github" />
+            <Button alt transparent text="Live app" />
+          </Button_Wrapper>
         </S.Links>
       </S.TextField>
     </S.Highlight>
