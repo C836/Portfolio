@@ -23,11 +23,11 @@ export default function Intro(props: Config) {
   return (
     <S.Intro ref={IntroRef}>
       <S.Background />
-      {
+      {width > 850 && (
         <S.Curriculo>
           <Button text="Currículo" />
         </S.Curriculo>
-      }
+      )}
 
       <S.TextField>
         <Subtitle>
@@ -37,8 +37,7 @@ export default function Intro(props: Config) {
           onMouseEnter={(e) => setActive(true)}
           onMouseLeave={(e) => setActive(false)}
         >
-          {
-            width > 850 ?
+          {width > 850 ? (
             <>
               <S.Name hidden={nameActive ? true : false}>
                 <Typewriter
@@ -59,16 +58,15 @@ export default function Intro(props: Config) {
                 {"<Gabriel Lopes />"}
               </Glitch>
             </>
-            :
+          ) : (
             <h1>{"<Gabriel Lopes />"}</h1>
-          }
+          )}
         </S.NameWrapper>
 
           <Text>
             Sou um desenvolvedor web e designer gráfico. Abaixo você encontra um
             pouco mais sobre mim e alguns de meus projetos favoritos.
           </Text>
-
 
           <Button text="Contato" />
       </S.TextField>

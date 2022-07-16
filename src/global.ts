@@ -23,7 +23,7 @@ body {
   width: 100%;
   opacity: 1;
 
-  @media (max-width: 800px){
+  @media (max-width: 850px){
   	overflow: auto;
   }
 }
