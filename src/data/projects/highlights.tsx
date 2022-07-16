@@ -4,7 +4,9 @@ export const highlights = [
   {
     nome: "Calculadora Geográfica",
     descricao:
-      "Uma aplicação para calcular a distância entre dois ou mais pontos do mundo apenas pelo seu endereço! O sistema irá resolver a geolocalização e exibir a distância de qualquer lugar do planeta. Além disso, também conta com um painel que exibe o clima e o fuso horário do local selecionado, tudo isso em uma interface simples e intuitiva",
+      "Uma aplicação para calcular a distância entre dois ou mais pontos do mundo apenas pelo seu endereço! O sistema irá resolver a geolocalização e exibir a distância de qualquer lugar do planeta. ",
+    extra:
+      "Além disso, também conta com um painel que exibe o clima e o fuso horário do local selecionado, tudo isso em uma interface simples e intuitiva",
     tech: { icon: <FaJs />, color: "#efd81d" },
     techs: ["Leaflet", "OpenStreetMap", "Nominatim API", "Weather API"],
     cover:
@@ -18,7 +20,9 @@ export const highlights = [
   {
     nome: "GreatDex",
     descricao:
-      "Meu primeiro projeto utilizando o framework Angular. A aplicação consiste em uma pokédex interativa utilizando PokeAPI para a requisição de todos os dados dos pokémons. Cada entrada da pokédex contém seu sprite animado e informações de combate, como stats e seus tipos. Atualmente exibindo todos os 913 pokémons!",
+      "Meu primeiro projeto utilizando o framework Angular. A aplicação consiste em uma pokédex interativa utilizando PokeAPI para a requisição de todos os dados dos pokémons. ",
+    extra:
+      "Cada entrada da pokédex contém seu sprite animado e informações de combate, como stats e seus tipos. Atualmente exibindo todos os 913 pokémons!",
     tech: { icon: <FaAngular />, color: "#d6002f" },
     techs: ["Typescript", "SCSS", "PokeAPI", "Karma", "Jasmine"],
     cover:
@@ -32,7 +36,9 @@ export const highlights = [
   {
     nome: "Online Chat",
     descricao:
-      "Uma sala de bate papo simples e dinâmica para conversar com seus amigos! A interface principal conta com um histórico de mensagens, uma lista com os usuários ativos e o campo de envio da mensagem, tendo a possibilidade de enviar mensagens para a sala ou para um usuário específico. A página contém um sistema de customização, permitindo alternar entre modo escuro ou claro as cores principais do layout.",
+      "Uma sala de bate papo simples e dinâmica para conversar com seus amigos! A aplicação conta com um histórico de mensagens, uma lista de usuários ativos e um sistema de mensagens privada. ",
+    extra:
+      "A página contém um sistema de customização, permitindo alternar entre modo escuro ou claro as cores principais do layout.",
     tech: { icon: <FaNodeJs />, color: "#7fc728" },
     techs: ["HTML", "CSS", "Javascript", "Socket.IO"],
     cover:
