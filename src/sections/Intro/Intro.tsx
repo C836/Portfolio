@@ -12,6 +12,10 @@ import Typewriter from "typewriter-effect";
 import { socials } from "../../data/socials";
 import useWindowDimensions from "../../utils/WindowDimensions";
 import { Subtitle, Text } from "../../components/Text/Text.styled";
+import {
+  Button_Wrapper,
+  Text_Wrapper,
+} from "../../components/Wrapper/Wrapper.styled";
 
 export default function Intro(props: Config) {
   const { IntroRef } = props;
@@ -63,12 +67,16 @@ export default function Intro(props: Config) {
           )}
         </S.NameWrapper>
 
+        <Text_Wrapper>
           <Text>
             Sou um desenvolvedor web e designer gráfico. Abaixo você encontra um
             pouco mais sobre mim e alguns de meus projetos favoritos.
           </Text>
+        </Text_Wrapper>
 
+        <Button_Wrapper>
           <Button text="Contato" />
+        </Button_Wrapper>
       </S.TextField>
 
       <Dropdown icons={socials} />
