@@ -2,6 +2,7 @@ export interface Config {
   data: {
     nome: string;
     descricao: string;
+    extra: string;
     tech: {
       icon: JSX.Element;
       color: string;

@@ -3,13 +3,17 @@ import { Config } from "./Highlight.config";
 
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
+import useWindowDimensions from "../../../utils/WindowDimensions";
+
 import { Small, Subtitle, Text } from "../../Text/Text.styled";
 import Button from "../../Button/Button";
 import { Button_Wrapper } from "../../Wrapper/Wrapper.styled";
 
 export default function Highlight(props: Config) {
   const { data, HighlightRef, right } = props;
-  const { nome, descricao, tech, techs, cover, gif, links } = data;
+  const { nome, descricao, extra, tech, techs, cover, gif, links } = data;
+
+  const { width } = useWindowDimensions()
 
   return (
     <S.Highlight ref={HighlightRef} right={right}>
@@ -26,7 +30,7 @@ export default function Highlight(props: Config) {
 
       <S.TextField>
         <Subtitle>{nome}</Subtitle>
-        <Text>{descricao}</Text>
+        <Text>{width > 1100 ? descricao + extra : descricao}</Text>
 
         <S.TechList>
           {techs.map((item: any, index: number) => (
