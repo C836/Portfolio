@@ -24,7 +24,6 @@ export default function Intro(props: Config) {
     <S.Intro ref={IntroRef}>
       <S.Background />
       {
-        width > 850 && 
         <S.Curriculo>
           <Button text="Currículo" />
         </S.Curriculo>
@@ -65,15 +64,13 @@ export default function Intro(props: Config) {
           }
         </S.NameWrapper>
 
-        <Subtitle>Sejam bem vindes ao meu portfólio 😎</Subtitle>
+          <Text>
+            Sou um desenvolvedor web e designer gráfico. Abaixo você encontra um
+            pouco mais sobre mim e alguns de meus projetos favoritos.
+          </Text>
 
-        <Text>
-          Sou um desenvolvedor web e designer gráfico. Abaixo você encontra um
-          pouco mais sobre mim e alguns de meus projetos favoritos.
-        </Text>
-        <Text>Obrigado por estar aqui! 😄</Text>
 
-        <Button text="Contato" />
+          <Button text="Contato" />
       </S.TextField>
 
       <Dropdown icons={socials} />
