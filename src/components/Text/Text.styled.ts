@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-family: 'Ubuntu Mono';
+  font-family: 'Raleway';
   font-size: 3rem;
   font-weight: bold;
   margin: 0;
@@ -13,7 +13,7 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.h2`
-  font-family: 'Ubuntu Mono';
+  font-family: 'Raleway';
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
@@ -26,9 +26,10 @@ export const Subtitle = styled.h2`
 
 
 export const Text = styled.p`
-  font: 1rem 'Nunito';
+  font: 1rem 'Raleway';
   margin: 0;
   line-height: 1.7;
+  text-align: justify;
 
   @media only screen and (max-width: 650px) {
     font-size: .875rem;
@@ -36,7 +37,7 @@ export const Text = styled.p`
 `;
 
 export const Small = styled.small`
-  font: .9rem 'Ubuntu Mono';
+  font: .9rem 'Raleway';
 
   @media only screen and (max-width: 650px) {
     font-size: .8rem;
