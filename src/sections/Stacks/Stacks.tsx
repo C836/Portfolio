@@ -4,8 +4,10 @@ import { Title } from "../../components/Text/Text.styled";
 import { icons } from "../../data/tech";
 
 export default function Stacks(props: Config) {
+  const { TechRef } = props
+
   return (
-    <S.Stacks>
+    <S.Stacks ref={TechRef}>
       <Title>Tech Stack</Title>
       <S.Icons_Wrapper>
         {icons.frontEnd.map((item, index) => (
