@@ -84,7 +84,7 @@ function App() {
       <Intro IntroRef={Refs.IntroRef.ref} />
       <div className="padding">
         <About AboutRef={Refs.AboutRef.ref} />
-        <Stacks />
+        <Stacks TechRef={Refs.TechRef.ref} />
         <Highlights
           HighlightRef1={Refs.HighlightRef1.ref}
           HighlightRef2={Refs.HighlightRef2.ref}
