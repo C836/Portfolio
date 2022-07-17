@@ -67,9 +67,11 @@ function App() {
   };
 
   useEffect(() => {
-    const currentPageSection = appSections[currentPageIndex];
+    if (width >= 850) {
+      const currentPageSection = appSections[currentPageIndex];
 
-    scroll(currentPageSection);
+      scroll(currentPageSection);
+    }
   }, [currentPageIndex]);
 
   return (
@@ -77,7 +79,7 @@ function App() {
       <GlobalStyle />
       <Background />
 
-      {width > 850 && (
+      {width >= 850 && (
         <Pagination pageIndex={currentPageIndex} sections={appSections} />
       )}
 
