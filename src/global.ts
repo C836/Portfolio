@@ -30,7 +30,7 @@ body {
 
 .padding{
   padding: 0 5%;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
