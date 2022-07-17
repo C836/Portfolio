@@ -11,6 +11,7 @@ import Extras from "./sections/Projects/Extras/Extras";
 import { Background } from "./layout/Background/Background.styled";
 import Contact from "./sections/Contact/Contact";
 import useWindowDimensions from "./utils/WindowDimensions";
+import Stacks from "./sections/Stacks/Stacks";
 
 interface RefsConfig {
   [key: string]: any
@@ -20,11 +21,10 @@ function App() {
   const appSections = [
     "IntroRef",
     "AboutRef",
+    "TechRef",
     "HighlightRef1",
     "HighlightRef2",
     "HighlightRef3",
-    "ExtraRef1",
-    "ExtraRef2",
     "ContactRef",
   ];
   const [currentPageIndex, setPageIndex] = useState(0);
@@ -44,13 +44,11 @@ function App() {
   const Refs: RefsConfig = {
     IntroRef: { ref: useRef<HTMLElement>(null), block: "start" },
     AboutRef: { ref: useRef<HTMLElement>(null), block: "start" },
+    TechRef: { ref: useRef<HTMLElement>(null), block: "start" },
 
     HighlightRef1: { ref: useRef<HTMLElement>(null), block: "start" },
     HighlightRef2: { ref: useRef<HTMLElement>(null), block: "center" },
     HighlightRef3: { ref: useRef<HTMLElement>(null), block: "center" },
-
-    ExtraRef1: { ref: useRef<HTMLElement>(null), block: "center" },
-    ExtraRef2: { ref: useRef<HTMLElement>(null), block: "center" },
 
     ContactRef: { ref: useRef<HTMLElement>(null), block: "start" },
   };
@@ -86,12 +84,12 @@ function App() {
       <Intro IntroRef={Refs.IntroRef.ref} />
       <div className="padding">
         <About AboutRef={Refs.AboutRef.ref} />
+        <Stacks />
         <Highlights
           HighlightRef1={Refs.HighlightRef1.ref}
           HighlightRef2={Refs.HighlightRef2.ref}
           HighlightRef3={Refs.HighlightRef3.ref}
         />
-        <Extras ExtraRef1={Refs.ExtraRef1.ref} ExtraRef2={Refs.ExtraRef2.ref} />
       </div>
 
       <Contact ContactRef={Refs.ContactRef.ref} />
