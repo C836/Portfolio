@@ -15,6 +15,11 @@ export const About = styled.section`
     height: auto;
     padding-top: 40px;
   }
+
+  @media (max-width: 850px){
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 `;
 
 export const TextField = styled.article`
