@@ -18,10 +18,9 @@ export const Highlight = styled.section<Highlight>`
 
 export const Border = styled.figure`
   --border-width: 6px;
-  
-  box-shadow: 
-    0 0 0 var(--border-width) black, 
-    0 0 0 calc(var(--border-width) + 2px) white ;
+
+  box-shadow: 0 0 0 var(--border-width) black,
+    0 0 0 calc(var(--border-width) + 2px) white;
   object-fit: contain;
   position: relative;
   width: 40%;
@@ -45,17 +44,17 @@ export const IconWrapper = styled.figure<Highlight>`
   right: -35px;
   margin: 0;
   border-radius: 50%;
-  background-color: ${(props)=> props.color};
+  background-color: ${(props) => props.color};
   z-index: 2;
   border: 4px solid white;
-`
+`;
 
 export const Icon = styled.figure<Highlight>`
   margin: 0;
   position: absolute;
   bottom: 18px;
   left: 18px;
-`
+`;
 
 export const Img_Wrapper = styled.div`
   position: relative;
@@ -69,17 +68,21 @@ export const Img_Wrapper = styled.div`
 
 export const TextField = styled.article<Highlight>`
   width: 60%;
-  max-width: 600px;
+
   margin: 0;
-  margin-left: 40px;
 
   @media (max-width: 1050px) {
-    margin-left: 30px;
     width: 40%;
   }
 
   @media (max-width: 850px) {
+    margin-top: 40px;
     width: 100%;
+  }
+
+  @media (min-width: 851px) {
+    margin-left: 40px;
+    max-width: 600px;
   }
 `;
 
