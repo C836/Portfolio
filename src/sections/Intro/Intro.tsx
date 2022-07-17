@@ -75,7 +75,8 @@ export default function Intro(props: Config) {
         </Text_Wrapper>
 
         <Button_Wrapper>
-          <Button text="Contato" />
+          <Button colored text="Contato" />
+          <Button text="Projetos" />
         </Button_Wrapper>
       </S.TextField>
 
