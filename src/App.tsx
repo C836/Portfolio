@@ -26,6 +26,7 @@ function App() {
     "HighlightRef2",
     "HighlightRef3",
     "HighlightRef4",
+    "ExtraRef",
     "ContactRef",
   ];
   const [currentPageIndex, setPageIndex] = useState(0);
@@ -51,6 +52,8 @@ function App() {
     HighlightRef2: { ref: useRef<HTMLElement>(null), block: "center" },
     HighlightRef3: { ref: useRef<HTMLElement>(null), block: "center" },
     HighlightRef4: { ref: useRef<HTMLElement>(null), block: "center" },
+
+    ExtraRef: { ref:useRef<HTMLElement>(null), block: "center" },
 
     ContactRef: { ref: useRef<HTMLElement>(null), block: "start" },
   };
@@ -95,6 +98,7 @@ function App() {
           HighlightRef3={Refs.HighlightRef3.ref}
           HighlightRef4={Refs.HighlightRef4.ref}
         />
+        <Extras ExtraRef={Refs.ExtraRef.ref}/>
       </div>
 
       <Contact ContactRef={Refs.ContactRef.ref} />
