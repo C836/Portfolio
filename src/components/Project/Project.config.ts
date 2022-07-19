@@ -17,6 +17,6 @@ export interface Config {
       github: string;
     };
   };
-  addToRef: AddToRefConfig;
+  addToRef: any;
   right?: boolean;
 }
