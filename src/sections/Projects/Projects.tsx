@@ -1,5 +1,4 @@
 import * as S from "./Projects.styled";
-import { Config } from "./Projects.config";
 import Project from "../../components/Project/Project";
 import { Text, Title } from "../../components/Text/Text.styled";
 import { projects } from "../../data/projects";

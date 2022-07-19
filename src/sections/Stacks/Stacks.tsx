@@ -1,5 +1,4 @@
 import * as S from "./Stacks.styled";
-import { Config } from "./Stacks.config";
 import { Title } from "../../components/Text/Text.styled";
 import { icons } from "../../data/tech";
 import { AddToRefConfig } from "../../App";

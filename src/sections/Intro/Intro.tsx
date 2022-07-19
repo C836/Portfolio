@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import * as S from "./Intro.styled";
-import { Config } from "./Intro.config";
 
 import Button from "../../components/Button/Button";
 import Dropdown from "../../components/Dropdown/Dropdown";

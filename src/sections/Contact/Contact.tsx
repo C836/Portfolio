@@ -1,5 +1,4 @@
 import * as S from "./Contact.styled";
-import { Config } from "./Contact.config";
 
 import Form from "../../components/Form/Form";
 import { Text, Title } from "../../components/Text/Text.styled";

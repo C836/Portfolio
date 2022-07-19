@@ -1,9 +1,6 @@
 import * as S from "./About.styled";
-import { Config } from "./About.config";
 
-import { icons } from "../../data/tech";
-
-import { Title, Text, Subtitle } from "../../components/Text/Text.styled";
+import { Title, Text } from "../../components/Text/Text.styled";
 import { AddToRefConfig } from "../../App";
 
 export default function About(props: AddToRefConfig) {
