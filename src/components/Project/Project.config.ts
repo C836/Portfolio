@@ -15,6 +15,6 @@ export interface Config {
       github: string;
     };
   };
-  HighlightRef?: React.RefObject<HTMLElement>;
+  ProjectRef?: React.RefObject<HTMLElement>;
   right?: boolean;
 }

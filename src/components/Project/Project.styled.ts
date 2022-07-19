@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-interface Highlight {
+interface Project {
   right?: boolean;
   color?: string;
 }
 
-export const Highlight = styled.section<Highlight>`
+export const Project = styled.section<Project>`
   position: relative;
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@ export const Border = styled.figure`
   }
 `;
 
-export const IconWrapper = styled.figure<Highlight>`
+export const IconWrapper = styled.figure<Project>`
   width: 100px;
   height: 100px;
   position: absolute;
@@ -49,7 +49,7 @@ export const IconWrapper = styled.figure<Highlight>`
   border: 4px solid white;
 `;
 
-export const Icon = styled.figure<Highlight>`
+export const Icon = styled.figure<Project>`
   margin: 0;
   position: absolute;
   bottom: 18px;
@@ -66,7 +66,7 @@ export const Img_Wrapper = styled.div`
   }
 `;
 
-export const TextField = styled.article<Highlight>`
+export const TextField = styled.article<Project>`
   width: 60%;
 
   margin: 0;
@@ -95,12 +95,12 @@ export const TechList = styled.ul`
   flex-wrap: wrap;
 `;
 
-export const Tech = styled.li<Highlight>`
+export const Tech = styled.li<Project>`
   margin-right: 18px;
   margin-bottom: 8px;
 `;
 
-export const Links = styled.ul<Highlight>`
+export const Links = styled.ul<Project>`
   color: white;
   font-size: 26px;
   padding: 0;

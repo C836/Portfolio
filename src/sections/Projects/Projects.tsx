@@ -1,23 +1,23 @@
 import * as S from "./Projects.styled";
 import { Config } from "./Projects.config";
-import Highlight from "../../components/Projects/Highlight/Highlight";
+import Project from "../../components/Project/Project";
 import { Text, Title } from "../../components/Text/Text.styled";
-import { highlights } from "../../data/projects/highlights";
+import { projects } from "../../data/projects";
 
-export default function Highlights(props: Config) {
-  const { HighlightRef1, HighlightRef2, HighlightRef3, HighlightRef4 } = props;
+export default function Projects(props: Config) {
+  const { ProjectRef1, ProjectRef2, ProjectRef3, ProjectRef4 } = props;
 
   return (
-    <S.Highlights ref={HighlightRef1}>
+    <S.Projects ref={ProjectRef1}>
       <Title>Projects</Title>
       <Text>A seguir estão alguns de meus projetos favoritos até o momento.</Text>
 
       <S.List>
-        <Highlight data={highlights[0]} />
-        <Highlight data={highlights[1]} HighlightRef={HighlightRef2} />
-        <Highlight data={highlights[2]} HighlightRef={HighlightRef3} />
-        <Highlight data={highlights[3]} HighlightRef={HighlightRef4} />
+        <Project data={projects[0]} />
+        <Project data={projects[1]} ProjectRef={ProjectRef2} />
+        <Project data={projects[2]} ProjectRef={ProjectRef3} />
+        <Project data={projects[3]} ProjectRef={ProjectRef4} />
       </S.List>
-    </S.Highlights>
+    </S.Projects>
   );
 }

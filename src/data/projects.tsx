@@ -1,6 +1,6 @@
-import { FaJs, FaAngular, FaVuejs, FaNodeJs } from "react-icons/fa";
+import { FaJs, FaAngular, FaNodeJs } from "react-icons/fa";
 
-export const highlights = [
+export const projects = [
   {
     nome: "Calculadora Geográfica",
     descricao:
@@ -49,4 +49,20 @@ export const highlights = [
       github: "https://github.com/C836/Online-chat",
     },
   },
+  {
+    nome: "Online Chat",
+    descricao:
+      "Uma sala de bate papo simples e dinâmica para conversar com seus amigos! A aplicação conta com um histórico de mensagens, uma lista de usuários ativos e um sistema de mensagens privada. ",
+    extra:
+      "A página contém um sistema de customização, permitindo alternar entre modo escuro ou claro as cores principais do layout.",
+    tech: { icon: <FaNodeJs />, color: "#7fc728" },
+    techs: ["HTML", "CSS", "Javascript", "Socket.IO"],
+    cover:
+      "https://raw.githubusercontent.com/C836/Online-chat/main/assets/components/images/chat.png",
+    gif: "https://c.tenor.com/qMZe3e1Er7EAAAAC/example.gif",
+    links: {
+      web: "https://c836-online-chat.herokuapp.com/",
+      github: "https://github.com/C836/Online-chat",
+    },
+  }
 ];

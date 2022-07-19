@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Highlights = styled.section`
+export const Projects = styled.section`
   padding-top: 30px;
   padding-bottom: 30vh;
 

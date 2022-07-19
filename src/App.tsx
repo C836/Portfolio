@@ -5,7 +5,7 @@ import { GlobalStyle } from "./global";
 
 import Intro from "./sections/Intro/Intro";
 import About from "./sections/About/About";
-import Highlights from "./sections/Projects/Projects";
+import Projects from "./sections/Projects/Projects";
 import Pagination from "./components/Pagination/Pagination";
 import { Background } from "./layout/Background/Background.styled";
 import Contact from "./sections/Contact/Contact";
@@ -21,10 +21,10 @@ function App() {
     "IntroRef",
     "AboutRef",
     "TechRef",
-    "HighlightRef1",
-    "HighlightRef2",
-    "HighlightRef3",
-    "HighlightRef4",
+    "ProjectRef1",
+    "ProjectRef2",
+    "ProjectRef3",
+    "ProjectRef4",
     "ContactRef",
   ];
   const [currentPageIndex, setPageIndex] = useState(0);
@@ -46,10 +46,10 @@ function App() {
     AboutRef: { ref: useRef<HTMLElement>(null), block: "start" },
     TechRef: { ref: useRef<HTMLElement>(null), block: "start" },
 
-    HighlightRef1: { ref: useRef<HTMLElement>(null), block: "start" },
-    HighlightRef2: { ref: useRef<HTMLElement>(null), block: "center" },
-    HighlightRef3: { ref: useRef<HTMLElement>(null), block: "center" },
-    HighlightRef4: { ref: useRef<HTMLElement>(null), block: "center" },
+    ProjectRef1: { ref: useRef<HTMLElement>(null), block: "start" },
+    ProjectRef2: { ref: useRef<HTMLElement>(null), block: "center" },
+    ProjectRef3: { ref: useRef<HTMLElement>(null), block: "center" },
+    ProjectRef4: { ref: useRef<HTMLElement>(null), block: "center" },
 
     ContactRef: { ref: useRef<HTMLElement>(null), block: "start" },
   };
@@ -88,11 +88,11 @@ function App() {
       <div className="padding">
         <About AboutRef={Refs.AboutRef.ref} />
         <Stacks TechRef={Refs.TechRef.ref} />
-        <Highlights
-          HighlightRef1={Refs.HighlightRef1.ref}
-          HighlightRef2={Refs.HighlightRef2.ref}
-          HighlightRef3={Refs.HighlightRef3.ref}
-          HighlightRef4={Refs.HighlightRef4.ref}
+        <Projects
+          ProjectRef1={Refs.ProjectRef1.ref}
+          ProjectRef2={Refs.ProjectRef2.ref}
+          ProjectRef3={Refs.ProjectRef3.ref}
+          ProjectRef4={Refs.ProjectRef4.ref}
         />
       </div>
 

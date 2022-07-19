@@ -1,6 +1,6 @@
 export interface Config {
-  HighlightRef1: React.RefObject<HTMLElement>;
-  HighlightRef2: React.RefObject<HTMLElement>;
-  HighlightRef3: React.RefObject<HTMLElement>;
-  HighlightRef4: React.RefObject<HTMLElement>;
+  ProjectRef1: React.RefObject<HTMLElement>;
+  ProjectRef2: React.RefObject<HTMLElement>;
+  ProjectRef3: React.RefObject<HTMLElement>;
+  ProjectRef4: React.RefObject<HTMLElement>;
 }
