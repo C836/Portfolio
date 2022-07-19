@@ -1,4 +1,11 @@
-import { useEffect, useRef, useState, WheelEvent } from "react";
+import {
+  JSXElementConstructor,
+  RefObject,
+  useEffect,
+  useRef,
+  useState,
+  WheelEvent,
+} from "react";
 import { getScrollDirection } from "./utils/Scroll/ScrollDirection";
 
 import { GlobalStyle } from "./global";
@@ -17,41 +24,32 @@ interface RefsConfig {
 }
 
 function App() {
-  const appSections = [
-    "IntroRef",
-    "AboutRef",
-    "TechRef",
-    "ProjectRef1",
-    "ProjectRef2",
-    "ProjectRef3",
-    "ProjectRef4",
-    "ContactRef",
-  ];
+  const [max_index_after_mount, setMaxIndex] = useState(0);
   const [currentPageIndex, setPageIndex] = useState(0);
 
   const { width } = useWindowDimensions();
 
-  const scroll = (scrollSection: string) => {
-    const selected_Section = Refs[scrollSection];
+  const scroll = (scrollSection: number) => {
+    const selected_Section: RefObject<HTMLElement> | any =
+      BaseRefs.current[scrollSection];
 
-    selected_Section.ref.current?.scrollIntoView({
+    selected_Section.scrollIntoView({
       behavior: "smooth",
-      block: selected_Section.block,
+      block: "center",
       inline: "center",
     });
   };
 
-  const Refs: RefsConfig = {
-    IntroRef: { ref: useRef<HTMLElement>(null), block: "start" },
-    AboutRef: { ref: useRef<HTMLElement>(null), block: "start" },
-    TechRef: { ref: useRef<HTMLElement>(null), block: "start" },
+  const BaseRefs = useRef<React.RefObject<HTMLElement>[]>([]);
+  BaseRefs.current = [];
 
-    ProjectRef1: { ref: useRef<HTMLElement>(null), block: "start" },
-    ProjectRef2: { ref: useRef<HTMLElement>(null), block: "center" },
-    ProjectRef3: { ref: useRef<HTMLElement>(null), block: "center" },
-    ProjectRef4: { ref: useRef<HTMLElement>(null), block: "center" },
+  const number_of_sections = 5;
 
-    ContactRef: { ref: useRef<HTMLElement>(null), block: "start" },
+  const addToRef = (element: React.RefObject<HTMLElement>) => {
+    console.log(element);
+    if (element && !BaseRefs.current.includes(element)) {
+      BaseRefs.current.push(element);
+    }
   };
 
   const handleScroll = (event: WheelEvent) => {
@@ -61,7 +59,7 @@ function App() {
       setPageIndex(currentPageIndex - 1);
     } else if (
       direction === "down" &&
-      currentPageIndex < appSections.length - 1
+      currentPageIndex < BaseRefs.current.length - 1
     ) {
       setPageIndex(currentPageIndex + 1);
     }
@@ -69,11 +67,13 @@ function App() {
 
   useEffect(() => {
     if (width >= 850) {
-      const currentPageSection = appSections[currentPageIndex];
-
-      scroll(currentPageSection);
+      scroll(currentPageIndex);
     }
   }, [currentPageIndex]);
+
+  useEffect(() => {
+    setMaxIndex(Object.values(BaseRefs.current).length - 1);
+  }, []);
 
   return (
     <div onWheel={handleScroll}>
@@ -83,26 +83,24 @@ function App() {
       {width >= 850 && (
         <Pagination
           pageIndex={
-            currentPageIndex === appSections.length - 1 ? 4 
-            : currentPageIndex <= 3 
-            ? currentPageIndex : 3}
-          sections_Count={appSections.length - 3}
+            currentPageIndex === max_index_after_mount
+              ? 4
+              : currentPageIndex <= 3
+              ? currentPageIndex
+              : 3
+          }
+          sections_Count={number_of_sections}
         />
       )}
 
-      <Intro IntroRef={Refs.IntroRef.ref} />
+      <Intro IntroRef={addToRef} />
       <div className="padding">
-        <About AboutRef={Refs.AboutRef.ref} />
-        <Stacks TechRef={Refs.TechRef.ref} />
-        <Projects
-          ProjectRef1={Refs.ProjectRef1.ref}
-          ProjectRef2={Refs.ProjectRef2.ref}
-          ProjectRef3={Refs.ProjectRef3.ref}
-          ProjectRef4={Refs.ProjectRef4.ref}
-        />
+        <About AboutRef={addToRef} />
+        <Stacks TechRef={addToRef} />
+        <Projects ProjectRef={addToRef} />
       </div>
 
-      <Contact ContactRef={Refs.ContactRef.ref} />
+      <Contact ContactRef={addToRef} />
     </div>
   );
 }
