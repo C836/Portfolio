@@ -3,7 +3,6 @@ import { Config } from "./About.config";
 
 import { icons } from "../../data/tech";
 
-import Slider from "../../components/Slider/Slider";
 import { Title, Text, Subtitle } from "../../components/Text/Text.styled";
 
 export default function About(props: Config) {

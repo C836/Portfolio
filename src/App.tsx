@@ -7,7 +7,6 @@ import Intro from "./sections/Intro/Intro";
 import About from "./sections/About/About";
 import Highlights from "./sections/Projects/Highlights/Highlights";
 import Pagination from "./components/Pagination/Pagination";
-import Extras from "./sections/Projects/Extras/Extras";
 import { Background } from "./layout/Background/Background.styled";
 import Contact from "./sections/Contact/Contact";
 import useWindowDimensions from "./utils/WindowDimensions";
