@@ -48,6 +48,7 @@ function App() {
     HighlightRef1: { ref: useRef<HTMLElement>(null), block: "start" },
     HighlightRef2: { ref: useRef<HTMLElement>(null), block: "center" },
     HighlightRef3: { ref: useRef<HTMLElement>(null), block: "center" },
+    HighlightRef4: { ref: useRef<HTMLElement>(null), block: "center" },
 
     ContactRef: { ref: useRef<HTMLElement>(null), block: "start" },
   };
@@ -90,6 +91,7 @@ function App() {
           HighlightRef1={Refs.HighlightRef1.ref}
           HighlightRef2={Refs.HighlightRef2.ref}
           HighlightRef3={Refs.HighlightRef3.ref}
+          HighlightRef4={Refs.HighlightRef3.ref}
         />
       </div>
 
