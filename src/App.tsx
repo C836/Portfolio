@@ -5,13 +5,12 @@ import { GlobalStyle } from "./global";
 
 import Intro from "./sections/Intro/Intro";
 import About from "./sections/About/About";
-import Highlights from "./sections/Projects/Highlights/Highlights";
+import Highlights from "./sections/Projects/Projects";
 import Pagination from "./components/Pagination/Pagination";
 import { Background } from "./layout/Background/Background.styled";
 import Contact from "./sections/Contact/Contact";
 import useWindowDimensions from "./utils/WindowDimensions";
 import Stacks from "./sections/Stacks/Stacks";
-import Extras from "./sections/Projects/Extras/Extras";
 
 interface RefsConfig {
   [key: string]: any
@@ -26,7 +25,6 @@ function App() {
     "HighlightRef2",
     "HighlightRef3",
     "HighlightRef4",
-    "ExtraRef",
     "ContactRef",
   ];
   const [currentPageIndex, setPageIndex] = useState(0);
@@ -52,8 +50,6 @@ function App() {
     HighlightRef2: { ref: useRef<HTMLElement>(null), block: "center" },
     HighlightRef3: { ref: useRef<HTMLElement>(null), block: "center" },
     HighlightRef4: { ref: useRef<HTMLElement>(null), block: "center" },
-
-    ExtraRef: { ref:useRef<HTMLElement>(null), block: "center" },
 
     ContactRef: { ref: useRef<HTMLElement>(null), block: "start" },
   };
@@ -98,7 +94,6 @@ function App() {
           HighlightRef3={Refs.HighlightRef3.ref}
           HighlightRef4={Refs.HighlightRef4.ref}
         />
-        <Extras ExtraRef={Refs.ExtraRef.ref}/>
       </div>
 
       <Contact ContactRef={Refs.ContactRef.ref} />

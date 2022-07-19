@@ -1,8 +1,8 @@
-import * as S from "./Highlights.styled";
-import { Config } from "./Highlights.config";
-import Highlight from "../../../components/Projects/Highlight/Highlight";
-import { Text, Title } from "../../../components/Text/Text.styled";
-import { highlights } from "../../../data/projects/highlights";
+import * as S from "./Projects.styled";
+import { Config } from "./Projects.config";
+import Highlight from "../../components/Projects/Highlight/Highlight";
+import { Text, Title } from "../../components/Text/Text.styled";
+import { highlights } from "../../data/projects/highlights";
 
 export default function Highlights(props: Config) {
   const { HighlightRef1, HighlightRef2, HighlightRef3, HighlightRef4 } = props;
