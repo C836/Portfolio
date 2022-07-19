@@ -11,6 +11,7 @@ import { Background } from "./layout/Background/Background.styled";
 import Contact from "./sections/Contact/Contact";
 import useWindowDimensions from "./utils/WindowDimensions";
 import Stacks from "./sections/Stacks/Stacks";
+import Extras from "./sections/Projects/Extras/Extras";
 
 interface RefsConfig {
   [key: string]: any
@@ -24,6 +25,7 @@ function App() {
     "HighlightRef1",
     "HighlightRef2",
     "HighlightRef3",
+    "HighlightRef4",
     "ContactRef",
   ];
   const [currentPageIndex, setPageIndex] = useState(0);
@@ -91,7 +93,7 @@ function App() {
           HighlightRef1={Refs.HighlightRef1.ref}
           HighlightRef2={Refs.HighlightRef2.ref}
           HighlightRef3={Refs.HighlightRef3.ref}
-          HighlightRef4={Refs.HighlightRef3.ref}
+          HighlightRef4={Refs.HighlightRef4.ref}
         />
       </div>
 
