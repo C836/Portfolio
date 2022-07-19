@@ -13,7 +13,7 @@ import useWindowDimensions from "./utils/WindowDimensions";
 import Stacks from "./sections/Stacks/Stacks";
 
 interface RefsConfig {
-  [key: string]: any
+  [key: string]: any;
 }
 
 function App() {
@@ -81,7 +81,13 @@ function App() {
       <Background />
 
       {width >= 850 && (
-        <Pagination pageIndex={currentPageIndex} sections={appSections} />
+        <Pagination
+          pageIndex={
+            currentPageIndex === appSections.length - 1 ? 4 
+            : currentPageIndex <= 3 
+            ? currentPageIndex : 3}
+          sections_Count={appSections.length - 3}
+        />
       )}
 
       <Intro IntroRef={Refs.IntroRef.ref} />

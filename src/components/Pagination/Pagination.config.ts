@@ -1,4 +1,4 @@
 export interface Config {
     pageIndex: number,
-    sections: string[]
+    sections_Count: number
 }
