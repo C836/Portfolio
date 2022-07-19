@@ -4,12 +4,13 @@ import { Config } from "./About.config";
 import { icons } from "../../data/tech";
 
 import { Title, Text, Subtitle } from "../../components/Text/Text.styled";
+import { AddToRefConfig } from "../../App";
 
-export default function About(props: Config) {
-  const { AboutRef } = props;
+export default function About(props: AddToRefConfig) {
+  const { addToRef } = props;
 
   return (
-    <S.About ref={AboutRef}>
+    <S.About ref={addToRef}>
       <S.TextField>
         <Title>About.me</Title>
         <Text>

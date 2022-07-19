@@ -16,16 +16,17 @@ import {
   Button_Wrapper,
   Text_Wrapper,
 } from "../../components/Wrapper/Wrapper.styled";
+import { AddToRefConfig } from "../../App";
 
-export default function Intro(props: Config) {
-  const { IntroRef } = props;
+export default function Intro(props: AddToRefConfig) {
+  const { addToRef } = props;
 
   const [nameActive, setActive] = useState(false);
 
   const { width } = useWindowDimensions();
 
   return (
-    <S.Intro ref={IntroRef}>
+    <S.Intro ref={addToRef}>
       <S.Background />
       {width > 850 && (
         <S.Curriculo>

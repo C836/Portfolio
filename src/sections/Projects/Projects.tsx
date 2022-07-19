@@ -3,9 +3,10 @@ import { Config } from "./Projects.config";
 import Project from "../../components/Project/Project";
 import { Text, Title } from "../../components/Text/Text.styled";
 import { projects } from "../../data/projects";
+import { AddToRefConfig } from "../../App";
 
-export default function Projects(props: Config) {
-  const { ProjectRef } = props;
+export default function Projects(props: AddToRefConfig) {
+  const { addToRef } = props;
 
   return (
     <S.Projects>
@@ -13,10 +14,10 @@ export default function Projects(props: Config) {
       <Text>A seguir estão alguns de meus projetos favoritos até o momento.</Text>
 
       <S.List>
-        <Project data={projects[0]} ProjectRef={ProjectRef} />
-        <Project data={projects[1]} ProjectRef={ProjectRef} />
-        <Project data={projects[2]} ProjectRef={ProjectRef} />
-        <Project data={projects[3]} ProjectRef={ProjectRef} />
+        <Project data={projects[0]} addToRef={addToRef} />
+        <Project data={projects[1]} addToRef={addToRef} />
+        <Project data={projects[2]} addToRef={addToRef} />
+        <Project data={projects[3]} addToRef={addToRef} />
       </S.List>
     </S.Projects>
   );

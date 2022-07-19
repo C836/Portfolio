@@ -1,5 +1,4 @@
 import {
-  JSXElementConstructor,
   RefObject,
   useEffect,
   useRef,
@@ -19,8 +18,10 @@ import Contact from "./sections/Contact/Contact";
 import useWindowDimensions from "./utils/WindowDimensions";
 import Stacks from "./sections/Stacks/Stacks";
 
-interface RefsConfig {
-  [key: string]: any;
+export interface AddToRefConfig {
+  addToRef:
+    | ((element: React.RefObject<HTMLElement>) => RefObject<HTMLElement>)
+    | any;
 }
 
 function App() {
@@ -46,7 +47,6 @@ function App() {
   const number_of_sections = 5;
 
   const addToRef = (element: React.RefObject<HTMLElement>) => {
-    console.log(element);
     if (element && !BaseRefs.current.includes(element)) {
       BaseRefs.current.push(element);
     }
@@ -93,14 +93,14 @@ function App() {
         />
       )}
 
-      <Intro IntroRef={addToRef} />
+      <Intro addToRef={addToRef} />
       <div className="padding">
-        <About AboutRef={addToRef} />
-        <Stacks TechRef={addToRef} />
-        <Projects ProjectRef={addToRef} />
+        <About addToRef={addToRef} />
+        <Stacks addToRef={addToRef} />
+        <Projects addToRef={addToRef} />
       </div>
 
-      <Contact ContactRef={addToRef} />
+      <Contact addToRef={addToRef} />
     </div>
   );
 }

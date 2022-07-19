@@ -2,12 +2,13 @@ import * as S from "./Stacks.styled";
 import { Config } from "./Stacks.config";
 import { Title } from "../../components/Text/Text.styled";
 import { icons } from "../../data/tech";
+import { AddToRefConfig } from "../../App";
 
-export default function Stacks(props: Config) {
-  const { TechRef } = props
+export default function Stacks(props: AddToRefConfig) {
+  const { addToRef } = props
 
   return (
-    <S.Stacks ref={TechRef}>
+    <S.Stacks ref={addToRef}>
       <Title>Tech Stack</Title>
       <S.Icons_Wrapper>
         {icons.frontEnd.map((item, index) => (

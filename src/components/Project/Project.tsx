@@ -10,13 +10,13 @@ import Button from "../Button/Button";
 import { Button_Wrapper } from "../Wrapper/Wrapper.styled";
 
 export default function Project(props: Config) {
-  const { data, ProjectRef, right } = props;
+  const { data, addToRef, right } = props;
   const { nome, descricao, extra, tech, techs, cover, gif, links } = data;
 
   const { width } = useWindowDimensions()
 
   return (
-    <S.Project ref={ProjectRef} right={right}>
+    <S.Project ref={addToRef} right={right}>
       <S.Border>
         <S.IconWrapper right={right} color={tech.color}>
           <S.Icon right={right}>{tech.icon}</S.Icon>

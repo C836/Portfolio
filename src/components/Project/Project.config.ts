@@ -1,3 +1,5 @@
+import { AddToRefConfig } from "../../App";
+
 export interface Config {
   data: {
     nome: string;
@@ -15,6 +17,6 @@ export interface Config {
       github: string;
     };
   };
-  ProjectRef?: React.RefObject<HTMLElement>;
+  addToRef: AddToRefConfig;
   right?: boolean;
 }
