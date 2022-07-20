@@ -27,7 +27,7 @@ export const Background = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6)
+    background: url(src/assets/img/background.jpeg)
       50% 62%;
     background-size: cover;
     opacity: 0.1;
