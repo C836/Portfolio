@@ -13,12 +13,12 @@ export default function Contact(props: AddToRefConfig) {
     <S.Contact ref={addToRef}>
       <S.ContentWrapper>
         <S.Email>
-          <Title>Contact.me</Title>
+          <Title>Fale comigo</Title>
 
           <Text>
-            Caso tenha algum interesse profissional ou queira trocar uma idéia
-            comigo, me envie um email atráves do formulário abaixo ou pelas
-            ícones ao lado. Tentarei responder o mais rápido possível!
+            Caso tenha algum interesse profissional ou só queira trocar uma
+            ideia, contate-me atráves do formulário abaixo ou através das redes
+            sociais ao lado. Tentarei responder o mais rápido possível!
           </Text>
 
           <Form />

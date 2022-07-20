@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Projects = styled.section`
   padding-top: 30px;
   padding-bottom: 30vh;
+  text-align: center;
 
   @media (max-width: 850px){
   	padding-bottom: 150px;
@@ -10,10 +11,12 @@ export const Projects = styled.section`
 `;
 
 export const List = styled.div`
+  text-align: left;
   display: flex;
   flex-direction: column;
   row-gap: 25vh;
-  margin: 30px 0;
+  margin-top: 60px;
+  margin-bottom: 30px;
 
   @media (max-width: 850px){
   	row-gap: 100px;

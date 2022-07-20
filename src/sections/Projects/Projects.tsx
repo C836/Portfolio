@@ -9,8 +9,7 @@ export default function Projects(props: AddToRefConfig) {
 
   return (
     <S.Projects>
-      <Title>Projects</Title>
-      <Text>A seguir estão alguns de meus projetos favoritos até o momento.</Text>
+      <Title>Meus projetos</Title>
 
       <S.List>
         <Project data={projects[0]} addToRef={addToRef} />
