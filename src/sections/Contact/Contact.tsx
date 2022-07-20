@@ -3,7 +3,7 @@ import * as S from "./Contact.styled";
 import Form from "../../components/Form/Form";
 import { Text, Title } from "../../components/Text/Text.styled";
 
-import { socials } from "../../data/socials";
+import { socials } from "../../assets/data/socials";
 import { AddToRefConfig } from "../../App";
 
 export default function Contact(props: AddToRefConfig) {

@@ -8,7 +8,7 @@ import Glitch from "../../components/Glitch/Glitch";
 
 import Typewriter from "typewriter-effect";
 
-import { socials } from "../../data/socials";
+import { socials } from "../../assets/data/socials";
 import useWindowDimensions from "../../utils/WindowDimensions";
 import { Subtitle, Text } from "../../components/Text/Text.styled";
 import {

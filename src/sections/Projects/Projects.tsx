@@ -1,7 +1,7 @@
 import * as S from "./Projects.styled";
 import Project from "../../components/Project/Project";
 import { Text, Title } from "../../components/Text/Text.styled";
-import { projects } from "../../data/projects";
+import { projects } from "../../assets/data/projects";
 import { AddToRefConfig } from "../../App";
 
 export default function Projects(props: AddToRefConfig) {

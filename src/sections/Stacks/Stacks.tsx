@@ -1,6 +1,6 @@
 import * as S from "./Stacks.styled";
 import { Title } from "../../components/Text/Text.styled";
-import { icons } from "../../data/tech";
+import { icons } from "../../assets/data/tech";
 import { AddToRefConfig } from "../../App";
 
 export default function Stacks(props: AddToRefConfig) {

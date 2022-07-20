@@ -1,7 +1,7 @@
 import * as S from "./Form.styled";
 import { Config } from "./Form.config";
 
-import apiKey from "../../data/emailAPI";
+import apiKey from "../../assets/data/emailAPI";
 import emailjs, { init } from "@emailjs/browser";
 import { useRef } from "react";
 import Button from "../Button/Button";
