@@ -17,12 +17,12 @@ export const Form = styled.form`
 
 const input_styles = `
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   box-sizing: border-box;
   border: 3px solid white;
   background: #00000050;
   color: white;
-  font: 1rem "Nunito";
+  font: 1rem "Raleway";
 `;
 
 export const Input = styled.input`
