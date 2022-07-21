@@ -9,14 +9,8 @@ export const About = styled.section`
   justify-content: center;
   text-align: center;
 
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    padding-top: 40px;
-  }
-
   @media (max-width: 850px){
+    height: auto;
     padding-top: 100px;
     padding-bottom: 120px;
   }
