@@ -36,24 +36,18 @@ export const Border = styled.figure`
   }
 `;
 
-export const IconWrapper = styled.figure<Project>`
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -35px;
-  right: -35px;
+export const Icon = styled.figure<{color: String}>`
   margin: 0;
+  padding: 8px;
+  position: absolute;
+  font-size: 38px;
+  border: 2px solid white;
   border-radius: 50%;
+  line-height: 0;
+  top: 8px;
+  right: 8px;
   background-color: ${(props) => props.color};
-  z-index: 2;
-  border: 4px solid white;
-`;
-
-export const Icon = styled.figure<Project>`
-  margin: 0;
-  position: absolute;
-  bottom: 18px;
-  left: 18px;
+  z-index: 90;
 `;
 
 export const Img_Wrapper = styled.div`

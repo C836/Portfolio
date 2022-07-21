@@ -18,9 +18,10 @@ export default function Project(props: Config) {
   return (
     <S.Project ref={addToRef} right={right}>
       <S.Border>
-        <S.IconWrapper right={right} color={tech.color}>
-          <S.Icon right={right}>{tech.icon}</S.Icon>
-        </S.IconWrapper>
+        <S.Icon color={tech.color}>
+          {tech.icon}
+        </S.Icon>
+
         <a target={"_blank"} href={links.web}>
           <S.Img_Wrapper>
             <img src={cover} />
