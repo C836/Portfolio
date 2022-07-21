@@ -8,6 +8,7 @@ import useWindowDimensions from "../../utils/WindowDimensions";
 import { Small, Subtitle, Text } from "../Text/Text.styled";
 import Button from "../Button/Button";
 import { Button_Wrapper } from "../Wrapper/Wrapper.styled";
+import { openInNewTab } from "../../utils/NewTab";
 
 export default function Project(props: Config) {
   const { data, addToRef, right } = props;
@@ -41,8 +42,8 @@ export default function Project(props: Config) {
 
         <S.Links right={right}>
           <Button_Wrapper>
-            <Button alt transparent text="Github" />
-            <Button alt transparent text="Live app" />
+            <Button alt transparent text="Github" onClick={() => openInNewTab(links.github)} />
+            <Button alt transparent text="Live app" onClick={() => openInNewTab(links.web)} />
           </Button_Wrapper>
         </S.Links>
       </S.TextField>
