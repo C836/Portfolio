@@ -1,23 +1,22 @@
 import * as S from "./Form.styled";
 import { Config } from "./Form.config";
 
-import apiKey from "../../assets/data/emailAPI";
 import emailjs, { init } from "@emailjs/browser";
 import { useRef } from "react";
 import Button from "../Button/Button";
 
 export default function Form() {
-  init(apiKey.USER_ID);
+  init(import.meta.env.VITE_USER_ID);
 
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     emailjs.sendForm(
-      apiKey.SERVICE_ID,
-      apiKey.TEMPLATE_ID,
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
       formRef.current || "",
-      apiKey.PUBLIC_KEY
+      import.meta.env.VITE_PUBLIC_KEY
     );
     formRef.current?.reset();
     alert("Mensagem enviada!");
