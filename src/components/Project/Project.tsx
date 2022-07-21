@@ -11,9 +11,7 @@ import { Button_Wrapper } from "../Wrapper/Wrapper.styled";
 
 export default function Project(props: Config) {
   const { data, addToRef, right } = props;
-  const { nome, descricao, extra, tech, techs, cover, gif, links } = data;
-
-  const { width } = useWindowDimensions()
+  const { nome, descricao, tech, techs, cover, gif, links } = data;
 
   return (
     <S.Project ref={addToRef} right={right}>
@@ -31,7 +29,7 @@ export default function Project(props: Config) {
 
       <S.TextField>
         <Subtitle>{nome}</Subtitle>
-        <Text>{width > 1100 ? descricao + extra : descricao}</Text>
+        <Text>{descricao}</Text>
 
         <S.TechList>
           {techs.map((item: any, index: number) => (
