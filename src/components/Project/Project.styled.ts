@@ -53,10 +53,14 @@ export const Icon = styled.figure<{color: String}>`
 export const Img_Wrapper = styled.div`
   position: relative;
   z-index: 1;
+  
 
   & img {
     width: 100%;
+    object-fit: cover;
+    object-position: top left;
     vertical-align: middle;
+    aspect-ratio: 3 / 2;
   }
 `;
 
