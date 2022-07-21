@@ -13,7 +13,7 @@ export const Intro = styled.section`
   }
 `;
 
-export const Background = styled.div`
+export const Background = styled.div<{background: string}>`
   position: absolute;
   top: 0;
   left: 0;
@@ -27,7 +27,7 @@ export const Background = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(src/assets/img/background.jpeg)
+    background: url(${props => props.background})
       50% 62%;
     background-size: cover;
     opacity: 0.1;

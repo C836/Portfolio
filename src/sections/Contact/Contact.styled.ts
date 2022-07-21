@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Contact = styled.section`
+export const Contact = styled.section<{background: string}>`
   position: relative;
   height: 100vh;
   display: flex;
@@ -24,7 +24,7 @@ export const Contact = styled.section`
     position: absolute;
     left: 0;
     opacity: 0.2;
-    background: url(src/assets/img/contact-background.jpeg);
+    background: url(${props => props.background});
     background-size: cover;
     mix-blend-mode: multiply;
     filter: contrast(2);

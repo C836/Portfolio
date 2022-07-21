@@ -17,6 +17,8 @@ import {
 } from "../../components/Wrapper/Wrapper.styled";
 import { AddToRefConfig } from "../../App";
 
+import background_imgPath from "./../../assets/img/background.jpeg"
+
 export default function Intro(props: AddToRefConfig) {
   const { addToRef } = props;
 
@@ -26,7 +28,7 @@ export default function Intro(props: AddToRefConfig) {
 
   return (
     <S.Intro ref={addToRef}>
-      <S.Background />
+      <S.Background background={background_imgPath} />
       {width > 850 && (
         <S.Curriculo>
           <Button text="Currículo" />

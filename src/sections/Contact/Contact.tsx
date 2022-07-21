@@ -6,11 +6,13 @@ import { Text, Title } from "../../components/Text/Text.styled";
 import { socials } from "../../assets/data/socials";
 import { AddToRefConfig } from "../../App";
 
+import background_imgPath from "./../../assets/img/contact-background.jpeg"
+
 export default function Contact(props: AddToRefConfig) {
   const { addToRef } = props;
 
   return (
-    <S.Contact ref={addToRef}>
+    <S.Contact ref={addToRef} background={background_imgPath}>
       <S.ContentWrapper>
         <S.Email>
           <Title>Fale comigo</Title>
