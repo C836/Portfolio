@@ -21,7 +21,6 @@ import {
 
 export const icons = {
   frontEnd: [
-    { name: "Javascript", icon: <SiJavascript />, color: "#f0dc1c" },
     { name: "Typescript", icon: <SiTypescript />, color: "#3074c4" },
     { name: "React", icon: <SiReact />, color: "#63dafb" },
     { name: "Vue", icon: <SiVuedotjs />, color: "#41b883" },
@@ -29,7 +28,6 @@ export const icons = {
     { name: "Sass", icon: <SiSass />, color: "#c66393" },
     { name: "Bootstrap", icon: <SiBootstrap />, color: "#523b73" },
     { name: "TailwindCSS", icon: <SiTailwindcss />, color: "#15b3c7" },
-    { name: "Figma", icon: <SiFigma />, color: "#ea4a1e" },
   ],
   backEndEtc: [
     { name: "Git", icon: <SiGit />, color: "#e44c30" },
