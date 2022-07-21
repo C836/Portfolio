@@ -74,7 +74,14 @@ export const NameWrapper = styled.div`
     width: 100%;
     margin: 25px 0;
     padding: 0;
-    line-height: 0;
+
+    @media (max-width: 800px){
+    	line-height: 30px;
+    }
+    
+    @media (max-width: 450px){
+    	line-height: 0;
+    }
   }
 `;
 
