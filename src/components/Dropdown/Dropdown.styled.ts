@@ -8,6 +8,7 @@ export const Dropdown = styled.section<Dropdown>`
   position: fixed;
   bottom: 1em;
   right: 1em;
+  z-index: var(--z-index-dropdown);
 
   &::after {
     display: block;

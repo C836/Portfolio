@@ -7,6 +7,7 @@ export const Contact = styled.section`
   align-items: center;
   background-color: black;
   padding: 0 5%;
+  z-index: var(--z-index-contact);
 
   &::before {
     content: "";

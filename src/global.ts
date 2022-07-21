@@ -3,6 +3,9 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   :root {
   --main: #217cd1;
+
+  --z-index-contact: 10;
+  --z-index-dropdown: 9;
 }
 
 html,
