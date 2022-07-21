@@ -17,10 +17,15 @@ import {
 } from "../../components/Wrapper/Wrapper.styled";
 import { AddToRefConfig } from "../../App";
 
-import background_imgPath from "./../../assets/img/background.jpeg"
+import background_imgPath from "./../../assets/img/background.jpeg";
+import { openInNewTab } from "../../utils/NewTab";
 
-export default function Intro(props: AddToRefConfig) {
-  const { addToRef } = props;
+export default function Intro(props: {
+  addToRef: any;
+  goTo: (index: number) => void;
+}) {
+
+  const { addToRef, goTo } = props;
 
   const [nameActive, setActive] = useState(false);
 
@@ -30,7 +35,13 @@ export default function Intro(props: AddToRefConfig) {
     <S.Intro ref={addToRef}>
       <S.Background background={background_imgPath} />
       {width > 850 && (
-        <S.Curriculo>
+        <S.Curriculo
+          onClick={() =>
+            openInNewTab(
+              "https://drive.google.com/file/d/1pmTKoYL5tCcLVUYlR--4a5G4vgwj70Vq/view?usp=sharing"
+            )
+          }
+        >
           <Button text="Currículo" />
         </S.Curriculo>
       )}
@@ -77,8 +88,8 @@ export default function Intro(props: AddToRefConfig) {
         </Text_Wrapper>
 
         <Button_Wrapper>
-          <Button colored text="Contato" />
-          <Button text="Projetos" />
+          <Button colored text="Contato" onClick={() => goTo(7)} />
+          <Button text="Projetos" onClick={() => goTo(3)} />
         </Button_Wrapper>
       </S.TextField>
 

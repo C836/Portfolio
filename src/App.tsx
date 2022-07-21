@@ -65,6 +65,11 @@ function App() {
     }
   };
 
+  const goTo = (index: number) => {
+    scroll(index);
+    setPageIndex(index)
+  }
+
   useEffect(() => {
     if (width >= 850) {
       scroll(currentPageIndex);
@@ -93,7 +98,7 @@ function App() {
         />
       )}
 
-      <Intro addToRef={addToRef} />
+      <Intro addToRef={addToRef} goTo={goTo} />
       <div className="padding">
         <About addToRef={addToRef} />
         <Stacks addToRef={addToRef} />
