@@ -24,7 +24,7 @@ export const Contact = styled.section`
     position: absolute;
     left: 0;
     opacity: 0.2;
-    background: url(https://i.ibb.co/gwbzM1p/6852573.jpg);
+    background: url(src/assets/img/contact-background.jpeg);
     background-size: cover;
     mix-blend-mode: multiply;
     filter: contrast(2);
