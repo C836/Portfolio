@@ -12,10 +12,9 @@ export default function Projects(props: AddToRefConfig) {
       <Title>Meus projetos</Title>
 
       <S.List>
-        <Project data={projects[0]} addToRef={addToRef} />
-        <Project data={projects[1]} addToRef={addToRef} />
-        <Project data={projects[2]} addToRef={addToRef} />
-        <Project data={projects[3]} addToRef={addToRef} />
+        {projects.map((project, index) => (
+          <Project key={index} data={project} addToRef={addToRef} />
+        ))}
       </S.List>
     </S.Projects>
   );
